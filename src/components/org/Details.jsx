@@ -31,7 +31,7 @@ function Details(props) {
 				aria-describedby="modal-modal-description"
 			>
 				<Box sx={style} className="modal">
-					<p>{details.id}</p>
+					{/* <p>{details.id}</p> */}
 					<p>
 						<span>Sent from: </span>
 						{details.name}

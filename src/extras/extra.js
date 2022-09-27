@@ -12,3 +12,17 @@
 	selectOrg={selectOrg}
 />; */
 }
+const [acceptedData, setAcceptedData] = useState(accepted);
+const handleRemove = (id) => {
+	console.log(id);
+	const newData = acceptedData.filter((d) => d.id !== id);
+	setAcceptedData(
+		newData,
+		localStorage.setItem('data', JSON.stringify(newData))
+	);
+};
+
+useEffect(() => {
+	const newData = localStorage.getItem('data');
+	if (newData) setAcceptedData(JSON.parse(newData));
+}, [acceptedData]);
