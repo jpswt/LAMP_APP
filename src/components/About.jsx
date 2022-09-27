@@ -17,7 +17,7 @@ function About() {
 					<img src={volunteer} alt="volunteer needed" />
 					<p>Volunteer your awesome skills to help others in your community!</p>
 					<Link to="/register">
-						<button className="button">Get Started</button>
+						<button className="button">Join Today!</button>
 					</Link>
 				</div>
 				<div className="col-2">
@@ -26,7 +26,7 @@ function About() {
 						Join our community and connect with amazing people ready to help!
 					</p>
 					<Link to="/register">
-						<button className="button">Get Started</button>
+						<button className="button">Get Connected</button>
 					</Link>
 				</div>
 			</div>

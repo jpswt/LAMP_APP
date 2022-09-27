@@ -31,7 +31,7 @@ function Map(props) {
 				{ address: org.address },
 				async function (results, status) {
 					if (status == window.google.maps.GeocoderStatus.OK) {
-						// map.setCenter(results[0].geometry.location);
+						console.log('Map Results are:', results);
 						let marker = new window.google.maps.Marker({
 							map: map,
 							position: results[0].geometry.location,
@@ -60,6 +60,50 @@ function Map(props) {
 	useEffect(() => {
 		getMap().catch(console.error);
 	}, [getMap]);
+
+	// useEffect(() => {
+	// 	const infoWindow = new window.google.maps.InfoWindow();
+	// 	const locateUser = () => {
+	// 		const map = new window.google.maps.Map(ref.current, {
+	// 			center: { lat: 30.266, lng: -97.733 },
+	// 			zoom: 11,
+	// 			mapId: '906637d0941a1c22',
+	// 			clickableIcons: false,
+	// 		});
+
+	// 		if (navigator.geolocation) {
+	// 			navigator.geolocation.getCurrentPosition(
+	// 				(position) => {
+	// 					const pos = {
+	// 						lat: position.coords.latitude,
+	// 						lng: position.coords.longitude,
+	// 					};
+
+	// 					infoWindow.setPosition(pos);
+	// 					infoWindow.setContent('Location found');
+	// 					infoWindow.open(map);
+	// 					map.setCenter(pos);
+	// 				}
+	// 				// function () {
+	// 				// 	handleLocationError(true, infoWindow, map.getCenter());
+	// 				// }
+	// 			);
+	// 		} else {
+	// 			// handleLocationError(false, infoWindow, map.getCenter());
+	// 		}
+	// 	};
+	// 	// const handleLocationError = (browserHasGeolocation, infoWindow, pos) => {
+	// 	// 	infoWindow.setPosition(pos);
+	// 	// 	infoWindow.setContent(
+	// 	// 		browserHasGeolocation
+	// 	// 			? 'Error: The Geolocation service failed.'
+	// 	// 			: "Error: Your browser doesn't support geolocation."
+	// 	// 	);
+	// 	// 	infoWindow.open(this.map);
+	// 	// };
+
+	// 	locateUser();
+	// });
 
 	return <div ref={ref} style={style} id="map" />;
 }

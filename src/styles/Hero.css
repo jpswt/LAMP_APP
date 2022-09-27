@@ -28,6 +28,7 @@
 }
 
 .hero .content p:first-child {
+	font-family: var(--ff-);
 	font-size: 4rem;
 	font-weight: 700;
 }
@@ -44,7 +45,7 @@
 
 .hero .button {
 	margin: 1rem 0;
-	width: 12rem;
+	width: 14rem;
 	background-color: var(--primary-color);
 	border: 1px solid var(--primary-color);
 	color: var(--secondary-accent);
