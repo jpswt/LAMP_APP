@@ -4,13 +4,10 @@ import { Link, useNavigate } from 'react-router-dom';
 import logo from '../images/logo.png';
 import { checkAuth } from '../Router';
 
-import { useLocation } from 'react-router-dom';
-
 import '../styles/NavBar.css';
 
 const NavBar = () => {
 	const navigate = useNavigate();
-	const location = useLocation();
 	const [click, setClick] = useState(false);
 	const handleClick = () => setClick(!click);
 

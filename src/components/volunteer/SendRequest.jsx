@@ -108,7 +108,7 @@ function SendRequest(props) {
 				setTimeout(() => {
 					setStatusMsg('');
 					handleClose();
-				}, 2000);
+				}, 1500);
 			})
 			.catch((error) => {
 				console.log(error);

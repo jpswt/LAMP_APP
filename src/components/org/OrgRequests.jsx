@@ -102,7 +102,7 @@ function VolRequests(props) {
 			});
 	};
 	if (!isLoaded) {
-		return 'test';
+		return <></>;
 	} else
 		return (
 			<div>

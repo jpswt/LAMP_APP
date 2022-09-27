@@ -13,7 +13,6 @@ function VolRequests(props) {
 	const [accepted, setAccepted] = useState([]);
 	const [declined, setDeclined] = useState([]);
 	const [pending, setPending] = useState([]);
-	const [allRequests, setAllRequests] = useState([]);
 
 	const [isLoaded, setIsLoaded] = useState(false);
 
@@ -45,7 +44,6 @@ function VolRequests(props) {
 				setDeclined(declined);
 				setPending(pending);
 				setIsLoaded(true);
-				setAllRequests(response.data);
 
 				console.log(response.data);
 				console.log('pending', pending);
@@ -59,10 +57,10 @@ function VolRequests(props) {
 
 	useEffect(() => {
 		getVolRequests();
-	}, [getVolRequests]);
+	}, []);
 
 	if (!isLoaded) {
-		return 'test';
+		return <></>;
 	} else
 		return (
 			<div>
