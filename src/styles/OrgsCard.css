@@ -53,3 +53,12 @@
 	background-color: hsla(22, 86%, 57%, 0.8);
 	border-color: hsla(22, 84%, 57%, 0.6);
 }
+
+.orgsCard a {
+	color: white;
+	transition: ease-in-out 0.3s;
+}
+
+.orgsCard a:hover {
+	text-decoration: underline;
+}

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import RequestCard from './RequestCard';
 import ReactPaginate from 'react-paginate';
+import pendingpic from '../../images/pending.png';
 
 import '../../styles/Requests.css';
 
@@ -46,7 +47,11 @@ function PendingRequests(props) {
 			);
 		});
 	if (props.pending.length === 0) {
-		return 'Currently no pending requests';
+		return (
+			<div className="imgContainer">
+				<img src={pendingpic} alt="pending" />
+			</div>
+		);
 	}
 	if (props.pending.length < 5) {
 		return <div className="requestGrid">{displayRequests}</div>;

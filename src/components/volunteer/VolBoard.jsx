@@ -83,6 +83,7 @@ function VolBoard(props) {
 										email={org.email}
 										address={org.address}
 										phone={org.phone}
+										website={org.website}
 										handleOpen={handleOpen}
 										handleClick={handleClick}
 										selectOrg={selectOrg}

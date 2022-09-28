@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import RequestCard from './RequestCard';
 import ReactPaginate from 'react-paginate';
+import pending from '../../images/pending.png';
 
 import '../../styles/Requests.css';
 
@@ -46,7 +47,11 @@ function AcceptedRequests(props) {
 			);
 		});
 	if (props.accepted.length === 0) {
-		return 'Currently no accepted requests';
+		return (
+			<div>
+				<img src={pending} alt="" />
+			</div>
+		);
 	}
 	if (props.accepted.length < 5) {
 		return <div className="requestGrid">{displayRequests}</div>;

@@ -50,7 +50,7 @@ function Register() {
 			return (
 				<>
 					<TextField
-						// required
+						required
 						onChange={handleChange}
 						value={newUser.address}
 						id="address"
@@ -69,7 +69,7 @@ function Register() {
 						}}
 					/>
 					<TextField
-						// required
+						required
 						onChange={handleChange}
 						value={newUser.phone}
 						id="phone"
@@ -77,6 +77,26 @@ function Register() {
 						label="Phone Number"
 						name="phone"
 						pattern="[0-9]{10}"
+						variant="outlined"
+						sx={{
+							'& .MuiInputLabel-root.Mui-focused': { color: 'black' },
+							'& .MuiOutlinedInput-root.Mui-focused': {
+								'& > fieldset': { borderColor: 'orange' },
+							},
+							'marginBottom': '1rem',
+							'width': '30ch',
+						}}
+					/>
+					<TextField
+						required
+						onChange={handleChange}
+						value={newUser.website}
+						id="website"
+						type="text"
+						label="Website"
+						placeholder="www.your-site.org"
+						name="website"
+						// pattern="[0-9]{10}"
 						variant="outlined"
 						sx={{
 							'& .MuiInputLabel-root.Mui-focused': { color: 'black' },
@@ -122,6 +142,7 @@ function Register() {
 					password: newUser.password,
 					address: newUser.address,
 					phone: newUser.phone,
+					website: newUser.website,
 					isOrg: newUser.isOrg,
 				})
 				.then((response) => {

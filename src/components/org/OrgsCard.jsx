@@ -1,12 +1,14 @@
 import React from 'react';
 import { FaPhoneAlt } from 'react-icons/fa';
 import { FaEnvelope } from 'react-icons/fa';
+import { FiGlobe } from 'react-icons/fi';
 import { Button } from '@mui/material';
 import { ImFire } from 'react-icons/im';
 
 import '../../styles/OrgsCard.css';
 
 const OrgInfo = (props) => {
+	console.log('org card', props);
 	const {
 		id,
 		name,
@@ -14,6 +16,7 @@ const OrgInfo = (props) => {
 		email,
 		address,
 		phone,
+		website,
 		handleOpen,
 		handleClick,
 		selectOrg,
@@ -44,6 +47,18 @@ const OrgInfo = (props) => {
 						style={{ marginRight: '10px', paddingTop: '4px', width: '12px' }}
 					/>
 					{email}
+				</p>
+				<p>
+					<FiGlobe
+						style={{ marginRight: '10px', paddingTop: '4px', width: '12px' }}
+					/>
+					<a
+						href={'http://' + website}
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						{website}
+					</a>
 				</p>
 				<div className="btnContainer">
 					<Button

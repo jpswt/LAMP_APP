@@ -52,7 +52,7 @@ export default function VolTabs(props) {
 		<Box sx={{ width: '100%' }}>
 			<Box
 				sx={{
-					borderBottom: 1,
+					// borderBottom: 1,
 					borderColor: 'var(--secondary-color)',
 					display: 'inline-flex',
 					width: '100%',
@@ -86,7 +86,7 @@ export default function VolTabs(props) {
 					}}
 					aria-label="scrollable auto tabs example"
 					TabIndicatorProps={{
-						style: { background: 'var(--secondary-color)' },
+						style: { background: 'var(--primary-color)' },
 					}}
 				>
 					<Tab label="Pending Sparks" {...a11yProps(0)} />

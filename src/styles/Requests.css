@@ -29,6 +29,18 @@
 	background-color: hsla(192, 36%, 40%, 0.45);
 }
 
+.imgContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 3rem;
+}
+
+img {
+	width: 325px;
+	text-align: center;
+}
+
 @media screen and (max-width: 1050px) {
 	/* .volBoard .orgCard {
 		margin: 0 auto;
