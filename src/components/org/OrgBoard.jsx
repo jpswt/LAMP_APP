@@ -14,8 +14,10 @@ function OrgBoard(props) {
 	const [declined, setDeclined] = useState([]);
 	const [pending, setPending] = useState([]);
 
-	const getRequests = () => {
-		axios
+	const [isLoaded, setIsLoaded] = useState(false);
+
+	async function getRequests() {
+		await axios
 			.get(`https://light-path.herokuapp.com/users/orgRequest`, {
 				headers: {
 					Authorization: cookies.jwt,
@@ -41,6 +43,7 @@ function OrgBoard(props) {
 				setAccepted(accepted);
 				setDeclined(declined);
 				setPending(pending);
+				setIsLoaded(true);
 
 				console.log(response.data);
 				console.log('pending', pending);
@@ -50,11 +53,11 @@ function OrgBoard(props) {
 			.catch((error) => {
 				console.log(error);
 			});
-	};
+	}
 
 	useEffect(() => {
 		getRequests();
-	}, []);
+	}, [cookies.jwt]);
 
 	const handleAccept = (e) => {
 		axios
@@ -90,26 +93,29 @@ function OrgBoard(props) {
 			});
 	};
 
-	return (
-		<div>
-			<div className="volRequest">
-				<div className="content">
-					<div className="main">
-						<h3>
-							{user.name.charAt(0).toUpperCase()}
-							{user.name.slice(1)}'s SparkBoard
-						</h3>
-						<h2>Newest Requests</h2>
-						<LatestRequests
-							pending={pending}
-							handleAccept={handleAccept}
-							handleDecline={handleDecline}
-						/>
+	if (!isLoaded) {
+		return <></>;
+	} else
+		return (
+			<div>
+				<div className="volRequest">
+					<div className="content">
+						<div className="main">
+							<h3>
+								{user.name.charAt(0).toUpperCase()}
+								{user.name.slice(1)}'s SparkBoard
+							</h3>
+							<h2>Newest Requests</h2>
+							<LatestRequests
+								pending={pending}
+								handleAccept={handleAccept}
+								handleDecline={handleDecline}
+							/>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	);
+		);
 }
 
 export default OrgBoard;
