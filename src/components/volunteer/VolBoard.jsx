@@ -7,7 +7,7 @@ import Map from './Map';
 import SendRequest from './SendRequest';
 import OrgInfo from '../org/OrgsCard';
 
-import '../../styles/VolBoard.css';
+import '../../styles/Board.css';
 import '../../styles/TimePicker.css';
 
 function VolBoard(props) {
@@ -57,7 +57,7 @@ function VolBoard(props) {
 	return (
 		<div>
 			{/* <NavBar /> */}
-			<div className="volBoard">
+			<div className="Board">
 				<div className="content">
 					<div className="main">
 						<h3>

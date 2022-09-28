@@ -3,7 +3,7 @@ import axios from 'axios';
 import cookie from 'cookie';
 import LatestRequests from './LatestRequests';
 
-import '../../styles/VolBoard.css';
+import '../../styles/Board.css';
 
 function OrgBoard(props) {
 	const cookies = cookie.parse(document.cookie);
