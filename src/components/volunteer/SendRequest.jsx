@@ -197,6 +197,7 @@ function SendRequest(props) {
 										bgcolor: 'hsla(192, 36%, 45%, 1)', // theme.palette.primary.main
 										color: 'white',
 									},
+									'transition': 'ease-in-out .3s',
 								}}
 							>
 								Send
@@ -213,6 +214,7 @@ function SendRequest(props) {
 										bgcolor: 'hsla(192, 36%, 45%, 1)', // theme.palette.primary.main
 										color: 'white',
 									},
+									'transition': 'ease-in-out .3s',
 								}}
 							>
 								Close

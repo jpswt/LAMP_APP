@@ -11,10 +11,20 @@ function RequestCard(props) {
 				<div className="titleBar">
 					<p>{name}</p>
 				</div>
-				<p>Sent on: {created_on}</p>
-				<p>Start Date: {start_date} </p>
-				<p>Start Time: {start_time}</p>
-				<p>Duration: {time_span}</p>
+				<p>
+					<span>Sent on: </span> {created_on}
+				</p>
+				<p>
+					<span>Start Date: </span> {start_date}{' '}
+				</p>
+				<p>
+					<span>Start Time: </span>
+					{start_time}
+				</p>
+				<p>
+					<span>Duration: </span>
+					{time_span}
+				</p>
 			</li>
 		</div>
 	);

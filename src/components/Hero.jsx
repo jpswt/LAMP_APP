@@ -6,7 +6,7 @@ function Hero() {
 	return (
 		<div className="hero" id="hero">
 			<div className="content">
-				<p>Volunteering </p>
+				<p>Volunteering Counts </p>
 				<p>Find volunteering opportunities.</p>
 				<p>Use your spark to light a path in your community</p>
 				{/* <a href="#about">
