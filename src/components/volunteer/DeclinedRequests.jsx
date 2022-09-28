@@ -46,10 +46,10 @@ function DeclinedRequests(props) {
 			);
 		});
 
-	if (props.declined.length === 0) {
+	if (declined.length === 0) {
 		return 'Currently no declined requests';
 	}
-	if (props.declined.length < 5) {
+	if (declined.length < 5) {
 		return <div className="requestGrid">{displayRequests}</div>;
 	} else {
 		return (

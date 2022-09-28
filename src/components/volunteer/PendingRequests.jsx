@@ -46,14 +46,14 @@ function PendingRequests(props) {
 				</div>
 			);
 		});
-	if (props.pending.length === 0) {
+	if (pending.length === 0) {
 		return (
 			<div className="imgContainer">
 				<img src={pendingpic} alt="pending" />
 			</div>
 		);
 	}
-	if (props.pending.length < 5) {
+	if (pending.length < 5) {
 		return <div className="requestGrid">{displayRequests}</div>;
 	} else {
 		return (

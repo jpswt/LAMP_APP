@@ -46,14 +46,14 @@ function AcceptedRequests(props) {
 				</div>
 			);
 		});
-	if (props.accepted.length === 0) {
+	if (accepted.length === 0) {
 		return (
 			<div>
 				<img src={pending} alt="" />
 			</div>
 		);
 	}
-	if (props.accepted.length < 5) {
+	if (accepted.length < 5) {
 		return <div className="requestGrid">{displayRequests}</div>;
 	} else {
 		return (

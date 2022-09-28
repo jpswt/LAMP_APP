@@ -65,10 +65,10 @@ function DeclinedRequests(props) {
 				</div>
 			);
 		});
-	if (props.declined.length === 0) {
+	if (declined.length === 0) {
 		return 'Currently no accepted requests';
 	}
-	if (props.declined.length < 7) {
+	if (declined.length < 7) {
 		return <div className="requestGrid">{displayRequests}</div>;
 	} else {
 		return (

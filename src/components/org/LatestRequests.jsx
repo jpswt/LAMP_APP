@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import OrgRequestCard from './OrgRequestCard';
 import Details from './Details';
+import newReq from '../../images/newReq.png';
 
 import '../../styles/Requests.css';
 
@@ -57,7 +58,11 @@ function LatestRequests(props) {
 		);
 	});
 	if (pending.length === 0) {
-		return 'Currently no pending requests';
+		return (
+			<div className="imgContainer">
+				<img src={newReq} alt="pending" />
+			</div>
+		);
 	}
 	return (
 		<div>
