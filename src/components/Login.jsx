@@ -42,13 +42,12 @@ function Login() {
 				// navigate('/dashboard');
 				console.log('headers', response.headers);
 				document.cookie = `jwt=${response.headers.authorization};max-age=60*10000`;
+				document.cookie = `userId=${response.data.userId};max-age=60*10000`;
 				loggedIn();
 			})
 			.catch((error) => {
 				console.log(error);
-				setErrorMsg(
-					'Login failed.  Please try again or register for an account'
-				);
+				setErrorMsg('Login failed. Try again or register for an account');
 			});
 
 		setUser({
@@ -142,7 +141,7 @@ function Login() {
 								>
 									LOGIN
 								</button>
-								{errorMsg ? <p className="">{errorMsg}</p> : null}
+								{errorMsg ? <p className="error">{errorMsg}</p> : null}
 							</form>
 							<span>
 								Not a Member? <Link to="/Register">Sign up now</Link>
