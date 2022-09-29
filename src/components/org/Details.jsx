@@ -21,6 +21,7 @@ const style = {
 
 function Details(props) {
 	const { handleClose, open, details } = props;
+	console.log('details are:', details);
 
 	return (
 		<div className="modalContainer">
@@ -31,10 +32,9 @@ function Details(props) {
 				aria-describedby="modal-modal-description"
 			>
 				<Box sx={style} className="modal">
-					{/* <p>{details.id}</p> */}
 					<p>
 						<span>Sent from: </span>
-						{details.name}
+						{details.username}
 					</p>
 					<p>
 						<span>Email:</span>{' '}
