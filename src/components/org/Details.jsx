@@ -33,7 +33,7 @@ function Details(props) {
 			>
 				<Box sx={style} className="modal">
 					<p>
-						<span>Sent from: </span>
+						<span>Username: </span>
 						{details.username}
 					</p>
 					<p>
