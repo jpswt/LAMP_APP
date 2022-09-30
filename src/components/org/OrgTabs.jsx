@@ -69,22 +69,22 @@ export default function OrgTabs(props) {
 		const newAcceptedData = acceptedData.filter((d) => d.id !== id);
 		setAcceptedData(
 			newAcceptedData,
-			localStorage.setItem('data', JSON.stringify(newAcceptedData))
+			localStorage.setItem('accepteddata', JSON.stringify(newAcceptedData))
 		);
 		const newDeclinedData = declinedData.filter((d) => d.id !== id);
 		setDeclinedData(
 			newDeclinedData,
-			localStorage.setItem('data', JSON.stringify(newDeclinedData))
+			localStorage.setItem('declineddata', JSON.stringify(newDeclinedData))
 		);
 	};
 
 	useEffect(() => {
-		const newAcceptedData = localStorage.getItem('data');
+		const newAcceptedData = localStorage.getItem('accepteddata');
 		if (newAcceptedData) setAcceptedData(JSON.parse(newAcceptedData));
 	}, []);
 
 	useEffect(() => {
-		const newDeclinedData = localStorage.getItem('data');
+		const newDeclinedData = localStorage.getItem('declineddata');
 		if (newDeclinedData) setDeclinedData(JSON.parse(newDeclinedData));
 	}, []);
 

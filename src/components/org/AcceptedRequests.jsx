@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import OrgRequestCard from './OrgRequestCard';
 import ReactPaginate from 'react-paginate';
+import acceptedpic from '../../images/accepted.png';
 
 import Details from './Details';
 
@@ -69,7 +70,11 @@ function AcceptedRequests(props) {
 			);
 		});
 	if (acceptedData.length === 0) {
-		return 'Currently no accepted requests';
+		return (
+			<div className="imgContainer">
+				<img src={acceptedpic} alt="pending" />
+			</div>
+		);
 	}
 	if (acceptedData.length < 7) {
 		return <div className="requestGrid">{displayRequests}</div>;
