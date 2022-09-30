@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
@@ -60,6 +60,22 @@ export default function OrgTabs(props) {
 	const handleChange = (event, newValue) => {
 		setValue(newValue);
 	};
+
+	const [acceptedData, setAcceptedData] = useState(accepted);
+
+	const handleRemove = (id) => {
+		console.log(id);
+		const newData = acceptedData.filter((d) => d.id !== id);
+		setAcceptedData(
+			newData,
+			localStorage.setItem('data', JSON.stringify(newData))
+		);
+	};
+
+	useEffect(() => {
+		const newData = localStorage.getItem('data');
+		if (newData) setAcceptedData(JSON.parse(newData));
+	}, [acceptedData]);
 
 	return (
 		<Box sx={{ width: '100%' }}>
@@ -125,7 +141,9 @@ export default function OrgTabs(props) {
 			</TabPanel>
 			<TabPanel value={value} index={1}>
 				<AcceptedRequests
+					acceptedData={acceptedData}
 					accepted={accepted}
+					handleRemove={handleRemove}
 					handleOpen={handleOpen}
 					handleClose={handleClose}
 					handleClick={handleClick}

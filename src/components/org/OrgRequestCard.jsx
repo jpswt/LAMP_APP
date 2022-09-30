@@ -12,6 +12,7 @@ function OrgRequestCard(props) {
 		time_span,
 		message,
 		created_on,
+		handleRemove,
 		handleAccept,
 		handleDecline,
 		handleClick,
@@ -106,6 +107,17 @@ function OrgRequestCard(props) {
 							View Details
 						</a>
 					</p>
+					<div className="buttonContainer">
+						<Button
+							variant="contained"
+							className="decline"
+							onClick={handleRemove}
+							id={id}
+							name="decline"
+						>
+							Remove
+						</Button>
+					</div>
 				</li>
 			</div>
 		);

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import OrgRequestCard from './OrgRequestCard';
 import ReactPaginate from 'react-paginate';
 
@@ -8,7 +8,9 @@ import '../../styles/Requests.css';
 
 function AcceptedRequests(props) {
 	const {
+		acceptedData,
 		accepted,
+		handleRemove,
 		handleOpen,
 		handleClick,
 		handleClose,
@@ -21,13 +23,13 @@ function AcceptedRequests(props) {
 
 	const requestsPerPage = 6;
 	const pageVisited = pageNumber * requestsPerPage;
-	const pageCount = Math.ceil(accepted.length / requestsPerPage);
+	const pageCount = Math.ceil(acceptedData.length / requestsPerPage);
 
 	const changePage = ({ selected }) => {
 		setPageNumber(selected);
 	};
 
-	const displayRequests = accepted
+	const displayRequests = acceptedData
 		.slice(pageVisited, pageVisited + requestsPerPage)
 		.map((requests, index) => {
 			let daySent = requests.created_on;
@@ -52,6 +54,7 @@ function AcceptedRequests(props) {
 							created_on={date}
 							handleOpen={handleOpen}
 							handleClick={() => handleClick(requests)}
+							handleRemove={() => handleRemove(requests.id)}
 						/>
 					</ol>
 					<div className="modalContainer">
@@ -64,10 +67,10 @@ function AcceptedRequests(props) {
 				</div>
 			);
 		});
-	if (accepted.length === 0) {
+	if (acceptedData.length === 0) {
 		return 'Currently no accepted requests';
 	}
-	if (accepted.length < 7) {
+	if (acceptedData.length < 7) {
 		return <div className="requestGrid">{displayRequests}</div>;
 	} else {
 		return (

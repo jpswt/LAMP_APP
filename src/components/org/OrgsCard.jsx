@@ -76,7 +76,7 @@ const OrgInfo = (props) => {
 							'color': 'white',
 							'cursor': 'pointer',
 							':hover': {
-								bgcolor: 'hsla(22, 86%, 60%, 0.9)', // theme.palette.primary.main
+								bgcolor: 'hsla(22, 86%, 60%, 0.9)',
 								color: 'white',
 							},
 						}}
@@ -84,15 +84,6 @@ const OrgInfo = (props) => {
 					>
 						Send Spark
 					</Button>
-					{/* <button
-						id={username}
-						onClick={(e) => {
-							handleClick(e);
-							handleOpen(e);
-						}}
-					>
-						Send Spark
-					</button> */}
 				</div>
 			</li>
 		</div>

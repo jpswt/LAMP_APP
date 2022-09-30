@@ -27,8 +27,17 @@ function Register() {
 
 	const [active, setActive] = useState('');
 
-	const handleClick = (event) => {
-		setActive(event.target.id);
+	const handleClick = (e) => {
+		setActive(e.target.id);
+	};
+
+	const checkClick = (e) => {
+		let id = e.target.id;
+		if (id === '1' || id === '2') {
+			handleRegister();
+		} else {
+			setErrorMsg('');
+		}
 	};
 
 	const handleChange = (e) => {
@@ -132,6 +141,9 @@ function Register() {
 				})
 				.catch((error) => {
 					console.log(error);
+					setErrorMsg(
+						'Username/Email already exist.  Please try again or sign in.'
+					);
 				});
 		} else {
 			axios
@@ -161,16 +173,19 @@ function Register() {
 	return (
 		<div className="login">
 			<div className="content">
-				<img
-					className="image"
-					src={loginImg}
-					alt="man standing in field with sunset in background"
-				/>
+				<div className="col-1">
+					<img
+						className="image"
+						src={loginImg}
+						alt="man standing in field with sunset in background"
+					/>
+				</div>
 				<div className="col-2">
 					<Paper
 						elevation={4}
 						sx={{
 							padding: '1rem 0 1rem 0',
+							marginBottom: '2rem',
 							display: 'flex',
 							flexDirection: 'column',
 							justifyContent: 'center',
@@ -182,7 +197,6 @@ function Register() {
 						<div className="selection">Choose one...</div>
 						<div className="choose-user">
 							<button
-								required
 								key={1}
 								className={active === '1' ? 'active' : undefined}
 								id="1"
@@ -206,7 +220,7 @@ function Register() {
 								Non-Profit Org
 							</button>
 						</div>
-
+						<hr />
 						<Container
 							sx={{
 								marginTop: '1rem',
