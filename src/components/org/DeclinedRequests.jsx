@@ -9,8 +9,6 @@ import '../../styles/Requests.css';
 function DeclinedRequests(props) {
 	const {
 		declined,
-		declinedData,
-		handleRemove,
 		handleOpen,
 		handleClose,
 		handleClick,
@@ -23,13 +21,13 @@ function DeclinedRequests(props) {
 
 	const requestsPerPage = 6;
 	const pageVisited = pageNumber * requestsPerPage;
-	const pageCount = Math.ceil(declinedData.length / requestsPerPage);
+	const pageCount = Math.ceil(declined.length / requestsPerPage);
 
 	const changePage = ({ selected }) => {
 		setPageNumber(selected);
 	};
 
-	const displayRequests = declinedData
+	const displayRequests = declined
 		.slice(pageVisited, pageVisited + requestsPerPage)
 		.map((requests, index) => {
 			let daySent = requests.created_on;
@@ -56,7 +54,6 @@ function DeclinedRequests(props) {
 							isAccepted={requests.accepted}
 							handleOpen={handleOpen}
 							handleClick={() => handleClick(requests)}
-							handleRemove={() => handleRemove(requests.id)}
 						/>
 					</ol>
 					<div className="modalContainer">

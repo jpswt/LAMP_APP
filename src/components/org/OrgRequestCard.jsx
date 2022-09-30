@@ -107,7 +107,7 @@ function OrgRequestCard(props) {
 							View Details
 						</a>
 					</p>
-					<div className="buttonContainer">
+					{/* <div className="buttonContainer">
 						<Button
 							variant="contained"
 							className="decline"
@@ -117,7 +117,7 @@ function OrgRequestCard(props) {
 						>
 							Remove
 						</Button>
-					</div>
+					</div> */}
 				</li>
 			</div>
 		);

@@ -61,33 +61,6 @@ export default function OrgTabs(props) {
 		setValue(newValue);
 	};
 
-	const [acceptedData, setAcceptedData] = useState(accepted);
-	const [declinedData, setDeclinedData] = useState(declined);
-
-	const handleRemove = (id) => {
-		console.log(id);
-		const newAcceptedData = acceptedData.filter((d) => d.id !== id);
-		setAcceptedData(
-			newAcceptedData,
-			localStorage.setItem('accepteddata', JSON.stringify(newAcceptedData))
-		);
-		const newDeclinedData = declinedData.filter((d) => d.id !== id);
-		setDeclinedData(
-			newDeclinedData,
-			localStorage.setItem('declineddata', JSON.stringify(newDeclinedData))
-		);
-	};
-
-	useEffect(() => {
-		const newAcceptedData = localStorage.getItem('accepteddata');
-		if (newAcceptedData) setAcceptedData(JSON.parse(newAcceptedData));
-	}, []);
-
-	useEffect(() => {
-		const newDeclinedData = localStorage.getItem('declineddata');
-		if (newDeclinedData) setDeclinedData(JSON.parse(newDeclinedData));
-	}, []);
-
 	return (
 		<Box sx={{ width: '100%' }}>
 			<Box
@@ -152,9 +125,7 @@ export default function OrgTabs(props) {
 			</TabPanel>
 			<TabPanel value={value} index={1}>
 				<AcceptedRequests
-					acceptedData={acceptedData}
 					accepted={accepted}
-					handleRemove={handleRemove}
 					handleOpen={handleOpen}
 					handleClose={handleClose}
 					handleClick={handleClick}
@@ -164,9 +135,7 @@ export default function OrgTabs(props) {
 			</TabPanel>
 			<TabPanel value={value} index={2}>
 				<DeclinedRequests
-					declinedData={declinedData}
 					declined={declined}
-					handleRemove={handleRemove}
 					handleOpen={handleOpen}
 					handleClose={handleClose}
 					handleClick={handleClick}

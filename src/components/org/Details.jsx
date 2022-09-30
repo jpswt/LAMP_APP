@@ -45,6 +45,10 @@ function Details(props) {
 						{details.start_date}
 					</p>
 					<p>
+						<span>Starting at: </span>
+						{details.start_time}
+					</p>
+					<p>
 						<span>Available for:</span> {details.time_span}
 					</p>
 					<p>

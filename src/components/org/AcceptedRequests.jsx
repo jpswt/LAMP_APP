@@ -9,9 +9,7 @@ import '../../styles/Requests.css';
 
 function AcceptedRequests(props) {
 	const {
-		acceptedData,
 		accepted,
-		handleRemove,
 		handleOpen,
 		handleClick,
 		handleClose,
@@ -24,13 +22,13 @@ function AcceptedRequests(props) {
 
 	const requestsPerPage = 6;
 	const pageVisited = pageNumber * requestsPerPage;
-	const pageCount = Math.ceil(acceptedData.length / requestsPerPage);
+	const pageCount = Math.ceil(accepted.length / requestsPerPage);
 
 	const changePage = ({ selected }) => {
 		setPageNumber(selected);
 	};
 
-	const displayRequests = acceptedData
+	const displayRequests = accepted
 		.slice(pageVisited, pageVisited + requestsPerPage)
 		.map((requests, index) => {
 			let daySent = requests.created_on;
@@ -56,7 +54,6 @@ function AcceptedRequests(props) {
 							isAccepted={requests.accepted}
 							handleOpen={handleOpen}
 							handleClick={() => handleClick(requests)}
-							handleRemove={() => handleRemove(requests.id)}
 						/>
 					</ol>
 					<div className="modalContainer">
@@ -69,14 +66,14 @@ function AcceptedRequests(props) {
 				</div>
 			);
 		});
-	if (acceptedData.length === 0) {
+	if (accepted.length === 0) {
 		return (
 			<div className="imgContainer">
 				<img src={acceptedpic} alt="pending" />
 			</div>
 		);
 	}
-	if (acceptedData.length < 7) {
+	if (accepted.length < 7) {
 		return <div className="requestGrid">{displayRequests}</div>;
 	} else {
 		return (
