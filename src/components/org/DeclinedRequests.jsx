@@ -51,6 +51,7 @@ function DeclinedRequests(props) {
 							time_span={requests.time_span}
 							message={requests.message}
 							created_on={date}
+							isAccepted={requests.accepted}
 							handleOpen={handleOpen}
 							handleClick={() => handleClick(requests)}
 						/>
