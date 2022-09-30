@@ -111,8 +111,9 @@
 
 .login .error {
 	font-size: 1.1rem;
-	color: red;
-	margin-bottom: 0.5rem;
+	color: black;
+	font-weight: 700;
+	margin-bottom: 1rem;
 }
 
 @media screen and (max-width: 940px) {

@@ -320,7 +320,7 @@ function Register() {
 								>
 									REGISTER
 								</button>
-								{errorMsg ? <p className="">{errorMsg}</p> : null}
+								{errorMsg ? <p className="error">{errorMsg}</p> : null}
 							</form>
 							<span>
 								Already a Member? <Link to="/login">Sign in</Link>
