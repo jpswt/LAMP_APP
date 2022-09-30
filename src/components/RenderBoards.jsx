@@ -18,8 +18,8 @@ const RenderBoards = () => {
 		isOrg: null,
 	});
 
-	useEffect(() => {
-		axios
+	async function getUser() {
+		await axios
 			.get('https://light-path.herokuapp.com/users/user', {
 				headers: {
 					Authorization: cookies.jwt,
@@ -32,7 +32,11 @@ const RenderBoards = () => {
 			.catch((error) => {
 				console.log(error);
 			});
-	}, [cookies.jwt]);
+	}
+
+	useEffect(() => {
+		getUser();
+	}, []);
 
 	if (user.isOrg === 0)
 		return (
