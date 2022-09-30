@@ -40,7 +40,7 @@ function LatestRequests(props) {
 						time_span={requests.time_span}
 						message={requests.message}
 						created_on={date}
-						accepted={requests.accepted}
+						isAccepted={requests.accepted}
 						handleAccept={handleAccept}
 						handleDecline={handleDecline}
 						handleOpen={handleOpen}

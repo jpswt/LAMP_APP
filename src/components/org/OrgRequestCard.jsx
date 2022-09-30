@@ -17,12 +17,12 @@ function OrgRequestCard(props) {
 		handleDecline,
 		handleClick,
 		handleOpen,
-		accepted,
+		isAccepted,
 	} = props;
 	console.log('RequestCard props: ', props);
 	let orgTitle = name.toUpperCase();
 
-	if (accepted === null) {
+	if (isAccepted === null) {
 		return (
 			<div className="requestCard" name={id}>
 				<li>
