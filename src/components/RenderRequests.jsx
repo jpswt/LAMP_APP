@@ -6,10 +6,8 @@ import axios from 'axios';
 import cookie from 'cookie';
 console.log(cookie.parse(document.cookie));
 
-// function Dashboard() {
 const RenderRequests = () => {
 	const cookies = cookie.parse(document.cookie);
-	// const [loading, setLoading] = useState(true);
 	const [user, setUser] = useState({
 		id: '',
 		name: '',
@@ -52,18 +50,3 @@ const RenderRequests = () => {
 };
 
 export default RenderRequests;
-
-// useEffect(() => {
-// 	axios
-// 		.get(`https://light-path.herokuapp.com/users/user`, {
-// 			headers: {
-// 				Authorization: cookies.jwt,
-// 			},
-// 		})
-// 		.then((response) => {
-// 			console.log(response.data);
-// 		})
-// 		.catch((error) => {
-// 			console.log(error);
-// 		});
-// });

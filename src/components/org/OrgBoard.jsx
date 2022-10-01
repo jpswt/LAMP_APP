@@ -105,7 +105,7 @@ function OrgBoard(props) {
 								{user.name.charAt(0).toUpperCase()}
 								{user.name.slice(1)}'s SparkBoard
 							</h3>
-							<h2>Newest Requests</h2>
+							{/* <h2>Newest Requests</h2> */}
 							<LatestRequests
 								pending={pending}
 								handleAccept={handleAccept}

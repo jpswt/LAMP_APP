@@ -140,7 +140,7 @@ function SendRequest(props) {
 							clearIcon={null}
 							format="M-d-y"
 						/>
-						<p>When time are you available?</p>
+						<p>What time are you available?</p>
 						<TimePicker
 							required
 							onChange={onChange}

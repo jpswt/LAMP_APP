@@ -36,6 +36,13 @@
 	margin-top: 3rem;
 }
 
+.imgContainer1 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 5.58rem;
+}
+
 img {
 	width: 325px;
 	text-align: center;
