@@ -69,7 +69,7 @@ function AcceptedRequests(props) {
 	if (accepted.length === 0) {
 		return (
 			<div className="imgContainer">
-				<img src={acceptedpic} alt="pending" />
+				<img src={acceptedpic} alt="No Accepted Requests" />
 			</div>
 		);
 	}

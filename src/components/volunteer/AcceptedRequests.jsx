@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import RequestCard from './RequestCard';
 import ReactPaginate from 'react-paginate';
-import pending from '../../images/pending.png';
+import acceptedpic from '../../images/accepted.png';
 
 import '../../styles/Requests.css';
 
@@ -48,8 +48,8 @@ function AcceptedRequests(props) {
 		});
 	if (accepted.length === 0) {
 		return (
-			<div>
-				<img src={pending} alt="" />
+			<div className="imgContainer">
+				<img src={acceptedpic} alt="No Accepted Requests" />
 			</div>
 		);
 	}

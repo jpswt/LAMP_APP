@@ -60,7 +60,7 @@ function LatestRequests(props) {
 	if (pending.length === 0) {
 		return (
 			<div className="imgContainer">
-				<img src={newReq} alt="pending" />
+				<img src={newReq} alt="No new requests" />
 			</div>
 		);
 	}

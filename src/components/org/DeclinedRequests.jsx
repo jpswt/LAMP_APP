@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import OrgRequestCard from './OrgRequestCard';
 import ReactPaginate from 'react-paginate';
+import declinedpic from '../../images/declined.png';
 
 import Details from './Details';
 
@@ -67,7 +68,11 @@ function DeclinedRequests(props) {
 			);
 		});
 	if (declined.length === 0) {
-		return 'Currently no accepted requests';
+		return (
+			<div className="imgContainer">
+				<img src={declinedpic} alt="No Declined Requests" />
+			</div>
+		);
 	}
 	if (declined.length < 7) {
 		return <div className="requestGrid">{displayRequests}</div>;

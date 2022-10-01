@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import RequestCard from './RequestCard';
 import ReactPaginate from 'react-paginate';
+import declinedpic from '../../images/declined.png';
 
 import '../../styles/Requests.css';
 
@@ -47,7 +48,11 @@ function DeclinedRequests(props) {
 		});
 
 	if (declined.length === 0) {
-		return 'Currently no declined requests';
+		return (
+			<div className="imgContainer">
+				<img src={declinedpic} alt="No Declined Requests" />
+			</div>
+		);
 	}
 	if (declined.length < 5) {
 		return <div className="requestGrid">{displayRequests}</div>;

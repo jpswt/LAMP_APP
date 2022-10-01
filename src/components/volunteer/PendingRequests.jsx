@@ -49,7 +49,7 @@ function PendingRequests(props) {
 	if (pending.length === 0) {
 		return (
 			<div className="imgContainer">
-				<img src={pendingpic} alt="pending" />
+				<img src={pendingpic} alt="No pending requests" />
 			</div>
 		);
 	}
