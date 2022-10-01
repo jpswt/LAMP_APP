@@ -3,10 +3,11 @@ import { Link, useNavigate } from 'react-router-dom';
 import Paper from '@mui/material/Paper';
 import TextField from '@mui/material/TextField';
 import Container from '@mui/material/Container';
+import axios from 'axios';
+
 import '../styles/Login.css';
 import logoBW from '../images/lampbw-sm.png';
 import loginImg from '../images/loginImg.jpg';
-import axios from 'axios';
 
 function Register() {
 	const navigate = useNavigate();
@@ -220,7 +221,7 @@ function Register() {
 								Non-Profit Org
 							</button>
 						</div>
-						<hr />
+						{/* <hr /> */}
 						<Container
 							sx={{
 								marginTop: '1rem',
