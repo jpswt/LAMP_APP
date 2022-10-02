@@ -3,11 +3,10 @@ import { Link, useNavigate } from 'react-router-dom';
 import Paper from '@mui/material/Paper';
 import TextField from '@mui/material/TextField';
 import Container from '@mui/material/Container';
-import axios from 'axios';
-
 import '../styles/Login.css';
 import logoBW from '../images/lampbw-sm.png';
 import loginImg from '../images/loginImg.jpg';
+import axios from 'axios';
 
 function Register() {
 	const navigate = useNavigate();
@@ -22,7 +21,7 @@ function Register() {
 		isOrg: '' || null,
 		userCreated: false,
 	});
-	console.log(newUser);
+	// console.log(newUser);
 
 	const [errorMsg, setErrorMsg] = useState('');
 
@@ -37,7 +36,7 @@ function Register() {
 		if (id === '1' || id === '2') {
 			handleRegister();
 		} else {
-			setErrorMsg('');
+			setErrorMsg();
 		}
 	};
 
@@ -137,14 +136,11 @@ function Register() {
 					isOrg: newUser.isOrg,
 				})
 				.then((response) => {
-					console.log(response);
+					// console.log(response);
 					navigate('/login');
 				})
 				.catch((error) => {
 					console.log(error);
-					setErrorMsg(
-						'Username/Email already exist.  Please try again or sign in.'
-					);
 				});
 		} else {
 			axios
@@ -159,7 +155,7 @@ function Register() {
 					isOrg: newUser.isOrg,
 				})
 				.then((response) => {
-					console.log(response);
+					// console.log(response);
 					navigate('/login');
 				})
 				.catch((error) => {
@@ -174,19 +170,16 @@ function Register() {
 	return (
 		<div className="login">
 			<div className="content">
-				<div className="col-1">
-					<img
-						className="image"
-						src={loginImg}
-						alt="man standing in field with sunset in background"
-					/>
-				</div>
+				<img
+					className="image"
+					src={loginImg}
+					alt="man standing in field with sunset in background"
+				/>
 				<div className="col-2">
 					<Paper
 						elevation={4}
 						sx={{
 							padding: '1rem 0 1rem 0',
-							marginBottom: '2rem',
 							display: 'flex',
 							flexDirection: 'column',
 							justifyContent: 'center',
@@ -221,7 +214,7 @@ function Register() {
 								Non-Profit Org
 							</button>
 						</div>
-						{/* <hr /> */}
+						<hr />
 						<Container
 							sx={{
 								marginTop: '1rem',
@@ -321,7 +314,7 @@ function Register() {
 								>
 									REGISTER
 								</button>
-								{errorMsg ? <p className="error">{errorMsg}</p> : null}
+								{errorMsg ? <p className="">{errorMsg}</p> : null}
 							</form>
 							<span>
 								Already a Member? <Link to="/login">Sign in</Link>

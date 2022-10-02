@@ -3,7 +3,7 @@ import '../../styles/RequestCard.css';
 
 function RequestCard(props) {
 	const { name, start_date, start_time, time_span, created_on } = props;
-	console.log('RequestCard props: ', props);
+	// console.log('RequestCard props: ', props);
 
 	return (
 		<div className="requestCard">

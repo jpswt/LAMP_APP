@@ -4,7 +4,7 @@ import NavBar from './NavBar';
 import OrgRequests from './org/OrgRequests';
 import axios from 'axios';
 import cookie from 'cookie';
-console.log(cookie.parse(document.cookie));
+// console.log(cookie.parse(document.cookie));
 
 const RenderRequests = () => {
 	const cookies = cookie.parse(document.cookie);
@@ -25,7 +25,7 @@ const RenderRequests = () => {
 			})
 			.then((response) => {
 				setUser(response.data[0]);
-				console.log(response);
+				// console.log(response);
 			})
 			.catch((error) => {
 				console.log(error);

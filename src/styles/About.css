@@ -18,13 +18,14 @@
 }
 
 .about .howTo {
-	width: 1140px;
+	width: 1200px;
 	margin: auto;
 	margin-top: 4rem;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	justify-content: center;
 	align-items: center;
+	gap: 1rem;
 	padding-bottom: 4rem;
 }
 
@@ -45,29 +46,29 @@
 	font-size: 1.3rem;
 }
 
-.about .col-2 img {
-	width: 500px;
-	padding: 0;
-	border-radius: 25px;
-}
-
-.enroll {
+.about .howTo .howToBox .enroll {
 	width: 125px;
 	height: 130px;
 }
 
-.advice {
+.about .howTo .howToBox .advice {
 	width: 150.55px;
 	height: 132px;
 }
 
-.vol {
+.about .howTo .howToBox .vol {
 	width: 125px;
 	height: 132px;
 }
 
 .orphan p {
 	padding-bottom: 1.5rem;
+}
+
+.about .col-2 img {
+	width: 500px;
+	padding: 0;
+	border-radius: 25px;
 }
 
 .about p {
@@ -79,7 +80,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	padding: 3rem;
+	padding: 1rem;
 }
 
 .about .col-2 p:first-of-type {
@@ -128,8 +129,22 @@
 		width: 90vw;
 	}
 
-	.about h3 {
-		font-size: 1.4rem;
+	.about h2 {
+		font-size: 1.6rem;
+		text-align: center;
+		color: black;
+	}
+
+	.about .howTo {
+		width: 100%;
+		grid-template-columns: repeat(1, 1fr);
+		gap: 3rem;
+	}
+
+	.about .howTo p {
+		width: 95%;
+		font-size: 1.3rem;
+		text-align: center;
 	}
 
 	.about .container .col-2 {

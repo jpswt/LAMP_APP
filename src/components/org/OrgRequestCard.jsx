@@ -19,7 +19,7 @@ function OrgRequestCard(props) {
 		handleOpen,
 		isAccepted,
 	} = props;
-	console.log('RequestCard props: ', props);
+	// console.log('RequestCard props: ', props);
 	let orgTitle = name.toUpperCase();
 
 	if (isAccepted === null) {

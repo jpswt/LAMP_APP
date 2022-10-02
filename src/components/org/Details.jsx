@@ -21,7 +21,7 @@ const style = {
 
 function Details(props) {
 	const { handleClose, open, details } = props;
-	console.log('details are:', details);
+	// console.log('details are:', details);
 
 	return (
 		<div className="modalContainer">

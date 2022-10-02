@@ -7,7 +7,7 @@ import '../../styles/Requests.css';
 
 function DeclinedRequests(props) {
 	const { declined } = props;
-	console.log('Pending props: ', props.declined);
+	// console.log('Pending props: ', props.declined);
 
 	const [pageNumber, setPageNumber] = useState(0);
 

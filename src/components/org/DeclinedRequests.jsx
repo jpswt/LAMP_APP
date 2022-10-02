@@ -16,7 +16,7 @@ function DeclinedRequests(props) {
 		open,
 		selectRequest,
 	} = props;
-	console.log('Declined props: ', props.declined);
+	// console.log('Declined props: ', props.declined);
 
 	const [pageNumber, setPageNumber] = useState(0);
 

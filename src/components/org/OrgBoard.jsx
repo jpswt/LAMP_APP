@@ -8,7 +8,7 @@ import '../../styles/Board.css';
 function OrgBoard(props) {
 	const cookies = cookie.parse(document.cookie);
 	const { user } = props;
-	console.log('props are:', user);
+	// console.log('props are:', user);
 
 	const [accepted, setAccepted] = useState([]);
 	const [declined, setDeclined] = useState([]);
@@ -45,10 +45,10 @@ function OrgBoard(props) {
 				setPending(pending);
 				setIsLoaded(true);
 
-				console.log(response.data);
-				console.log('pending', pending);
-				console.log('accepted', accepted);
-				console.log('declined', declined);
+				// console.log(response.data);
+				// console.log('pending', pending);
+				// console.log('accepted', accepted);
+				// console.log('declined', declined);
 			})
 			.catch((error) => {
 				console.log(error);

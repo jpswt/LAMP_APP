@@ -8,7 +8,7 @@ import { ImFire } from 'react-icons/im';
 import '../../styles/OrgsCard.css';
 
 const OrgInfo = (props) => {
-	console.log('org card', props);
+	// console.log('org card', props);
 	const {
 		id,
 		name,

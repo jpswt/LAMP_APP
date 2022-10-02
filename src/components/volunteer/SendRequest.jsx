@@ -38,12 +38,12 @@ function SendRequest(props) {
 	const [message, setMessage] = useState('');
 	const [select, setSelect] = useState('');
 	const [statusMsg, setStatusMsg] = useState('');
-	console.log('cookies are:', cookies);
-	console.log('PopUp', selectOrg.id);
-	console.log('Date Value', date);
-	console.log('time value', value);
-	console.log('Time Span is:', select);
-	console.log('My Message is:', message);
+	// console.log('cookies are:', cookies);
+	// console.log('PopUp', selectOrg.id);
+	// console.log('Date Value', date);
+	// console.log('time value', value);
+	// console.log('Time Span is:', select);
+	// console.log('My Message is:', message);
 	const timeSpanArr = ['0-1 hours', '1-2 hours', '3-4 hours', '4+ hours'];
 
 	const convertTime = () => {
@@ -77,7 +77,7 @@ function SendRequest(props) {
 		return finalDate;
 	};
 
-	console.log('Final Date: ', convertDate(date));
+	// console.log('Final Date: ', convertDate(date));
 
 	const handleInput = (e) => {
 		setMessage(e.target.value);
@@ -103,7 +103,7 @@ function SendRequest(props) {
 				{ headers: { Authorization: cookies.jwt } }
 			)
 			.then((response) => {
-				console.log(response);
+				// console.log(response);
 				setStatusMsg('Your request has been sent!');
 				setTimeout(() => {
 					setStatusMsg('');

@@ -7,7 +7,7 @@ import '../../styles/Requests.css';
 
 function AcceptedRequests(props) {
 	const { accepted } = props;
-	console.log('Pending props: ', props.accepted);
+	// console.log('Pending props: ', props.accepted);
 
 	const [pageNumber, setPageNumber] = useState(0);
 

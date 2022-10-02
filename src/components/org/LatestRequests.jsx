@@ -7,7 +7,7 @@ import '../../styles/Requests.css';
 
 function LatestRequests(props) {
 	const { pending, handleAccept, handleDecline } = props;
-	console.log('all request props: ', props.pending);
+	// console.log('all request props: ', props.pending);
 
 	const [selectRequest, setSelectRequest] = useState({});
 	const [open, setOpen] = useState(false);

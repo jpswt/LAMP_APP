@@ -16,7 +16,7 @@ function AcceptedRequests(props) {
 		open,
 		selectRequest,
 	} = props;
-	console.log('Pending props: ', props.accepted);
+	// console.log('Pending props: ', props.accepted);
 
 	const [pageNumber, setPageNumber] = useState(0);
 

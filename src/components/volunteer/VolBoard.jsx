@@ -13,7 +13,7 @@ import '../../styles/TimePicker.css';
 function VolBoard(props) {
 	const cookies = cookie.parse(document.cookie);
 	const { user } = props;
-	console.log('props', user);
+	// console.log('props', user);
 
 	const [allOrgs, setAllOrgs] = useState([]);
 	const [selectOrg, setSelectOrg] = useState('');
@@ -35,7 +35,7 @@ function VolBoard(props) {
 					allOrgs.push(orgs);
 				});
 				setAllOrgs(response.data);
-				console.log('Response.data', response.data);
+				// console.log('Response.data', response.data);
 			})
 			.catch((error) => {
 				console.log(error);
@@ -43,16 +43,16 @@ function VolBoard(props) {
 	}, []);
 
 	const handleClick = (e) => {
-		console.log('click allOrgs is:', allOrgs);
+		// console.log('click allOrgs is:', allOrgs);
 		for (let i = 0; i < allOrgs.length; i++) {
 			if (allOrgs[i].username === e.target.id) {
 				setSelectOrg(allOrgs[i]);
-				console.log('All orgs I', allOrgs[i]);
+				// console.log('All orgs I', allOrgs[i]);
 			}
 		}
 	};
 
-	console.log('list of allOrgs', allOrgs);
+	// console.log('list of allOrgs', allOrgs);
 
 	return (
 		<div>

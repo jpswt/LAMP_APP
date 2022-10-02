@@ -18,7 +18,7 @@ function PendingRequests(props) {
 		open,
 		selectRequest,
 	} = props;
-	console.log('Pending props: ', props.pending);
+	// console.log('Pending props: ', props.pending);
 
 	const [pageNumber, setPageNumber] = useState(0);
 

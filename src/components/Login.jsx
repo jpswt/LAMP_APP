@@ -40,7 +40,7 @@ function Login() {
 				// localStorage.setItem('user_email', user.email);
 				// document.cookie = 'loggedIn=true;max-age=60*10000','';
 				// navigate('/dashboard');
-				console.log('headers', response.headers);
+				// console.log('headers', response.headers);
 				document.cookie = `jwt=${response.headers.authorization};max-age=60*10000`;
 				document.cookie = `userId=${response.data.userId};max-age=60*10000`;
 				loggedIn();
