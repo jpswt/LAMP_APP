@@ -1,7 +1,7 @@
 .about {
 	background-color: hsl(0, 0%, 90%);
 	margin: auto;
-	padding: 6rem 1rem 0 1rem;
+	padding: 8rem 1rem 0 1rem;
 	width: 100%;
 }
 
@@ -12,14 +12,62 @@
 	grid-template-columns: repeat(2, 1fr);
 }
 
-.about h3 {
+.about h2 {
 	text-align: center;
+	color: black;
 }
 
-img {
+.about .howTo {
+	width: 1140px;
+	margin: auto;
+	margin-top: 4rem;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 4rem;
+}
+
+.about .howTo .howToBox {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.about .howTo .howToBox h3 {
+	color: black;
+	margin-top: 1rem;
+}
+
+.about .howTo p {
+	width: 90%;
+	font-size: 1.3rem;
+}
+
+.about .col-2 img {
 	width: 500px;
 	padding: 0;
 	border-radius: 25px;
+}
+
+.enroll {
+	width: 125px;
+	height: 130px;
+}
+
+.advice {
+	width: 150.55px;
+	height: 132px;
+}
+
+.vol {
+	width: 125px;
+	height: 132px;
+}
+
+.orphan p {
+	padding-bottom: 1.5rem;
 }
 
 .about p {

@@ -4,12 +4,35 @@ import volunteer from '../images/volunteer.jpg';
 import org from '../images/org.jpg';
 import '../styles/About.css';
 
+import volunteer1 from '../images/volunteer1.png';
+import enrollment from '../images/enrollment.png';
+import advice from '../images/advice-icon.png';
+
 function About() {
 	return (
 		<div className="about" id="about">
-			<h3>
+			<h2>
 				We help volunteers and organizations connect to empower their community.{' '}
-			</h3>
+			</h2>
+			<div className="howTo">
+				<div className="howToBox">
+					<div>
+						<img src={enrollment} className="enroll" alt="" />
+					</div>
+					<h3>1. Volunteers</h3>
+					<p>Create an account and search for an organization to work with.</p>
+				</div>
+				<div className="howToBox">
+					<img src={advice} className="advice" alt="" />
+					<h3>2. Send a Request</h3>
+					<p>Share your interests, skills and availability.</p>
+				</div>
+				<div className="howToBox orphan">
+					<img src={volunteer1} className="vol" alt="" />
+					<h3>3. Partner with an Organization</h3>
+					<p>Connect, meet and start volunteering!</p>
+				</div>
+			</div>
 			<div className="container">
 				{/* <img src={john} alt="john" /> */}
 				<div className="col-2">
