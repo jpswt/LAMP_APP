@@ -30,6 +30,10 @@
 	border: 4px var(--primary-color) solid;
 }
 
+.requestBox {
+	margin-top: 2.5rem;
+}
+
 .Board .orgCard {
 	display: flex;
 	flex-direction: column;
@@ -39,7 +43,7 @@
 
 .Board ol {
 	display: grid;
-	column-gap: 5rem;
+	column-gap: 4rem;
 	row-gap: 3rem;
 	grid-template-columns: repeat(2, 1fr);
 }

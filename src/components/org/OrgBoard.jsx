@@ -106,11 +106,13 @@ function OrgBoard(props) {
 								{user.name.slice(1)}'s SparkBoard
 							</h3>
 							{/* <h2>Newest Requests</h2> */}
-							<LatestRequests
-								pending={pending}
-								handleAccept={handleAccept}
-								handleDecline={handleDecline}
-							/>
+							<div className="requestBox">
+								<LatestRequests
+									pending={pending}
+									handleAccept={handleAccept}
+									handleDecline={handleDecline}
+								/>
+							</div>
 						</div>
 					</div>
 				</div>
