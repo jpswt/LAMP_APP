@@ -3,6 +3,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import Paper from '@mui/material/Paper';
 import TextField from '@mui/material/TextField';
 import Container from '@mui/material/Container';
+import Tooltip from '@mui/material/Tooltip';
+import Typography from '@mui/material/Typography';
 import '../styles/Login.css';
 import logoBW from '../images/lampbw-sm.png';
 import loginImg from '../images/loginImg.jpg';
@@ -21,10 +23,11 @@ function Register() {
 		isOrg: '' || null,
 		userCreated: false,
 	});
-	// console.log(newUser);
+	console.log(newUser);
 
 	const [errorMsg, setErrorMsg] = useState('');
-
+	const [clickMsg, setClickMsg] = useState('');
+	const [disabled, setDisabled] = useState(true);
 	const [active, setActive] = useState('');
 
 	const handleClick = (e) => {
@@ -34,9 +37,17 @@ function Register() {
 	const checkClick = (e) => {
 		let id = e.target.id;
 		if (id === '1' || id === '2') {
-			handleRegister();
+			setDisabled(false);
+		}
+	};
+
+	const checkValid = (e) => {
+		if (disabled === true) {
+			setClickMsg(
+				'Be sure to select either if you are either a Volunteer or Organization'
+			);
 		} else {
-			setErrorMsg();
+			return null;
 		}
 	};
 
@@ -136,7 +147,7 @@ function Register() {
 					isOrg: newUser.isOrg,
 				})
 				.then((response) => {
-					// console.log(response);
+					console.log(response);
 					navigate('/login');
 				})
 				.catch((error) => {
@@ -155,7 +166,7 @@ function Register() {
 					isOrg: newUser.isOrg,
 				})
 				.then((response) => {
-					// console.log(response);
+					console.log(response);
 					navigate('/login');
 				})
 				.catch((error) => {
@@ -197,6 +208,7 @@ function Register() {
 								onClick={(e) => {
 									handleUserSelection(e);
 									handleClick(e);
+									checkClick(e);
 								}}
 							>
 								Volunteer
@@ -209,12 +221,12 @@ function Register() {
 								onClick={(e) => {
 									handleUserSelection(e);
 									handleClick(e);
+									checkClick(e);
 								}}
 							>
 								Non-Profit Org
 							</button>
 						</div>
-						<hr />
 						<Container
 							sx={{
 								marginTop: '1rem',
@@ -305,16 +317,43 @@ function Register() {
 									}}
 								/>
 								{showOrgForm()}
+								{disabled ? (
+									<Tooltip
+										title={
+											<Typography fontSize={'1.0rem'}>
+												Please select if you are a Volunteer or an Organization
+											</Typography>
+										}
+										placement="top"
+										arrow
+										leaveTouchDelay={500}
+										sx={{}}
+									>
+										<button
+											id="submitbtn"
+											className="button btn"
+											type="submit"
+											variant="contained"
+											style={{ marginTop: '1rem' }}
+											disabled={disabled}
+										>
+											<span>REGISTER</span>
+										</button>
+									</Tooltip>
+								) : (
+									<button
+										id="submitbtn"
+										className="button btn"
+										type="submit"
+										variant="contained"
+										style={{ marginTop: '1rem' }}
+										// disabled={disabled}
+									>
+										<span>REGISTER</span>
+									</button>
+								)}
 
-								<button
-									className="button"
-									type="submit"
-									variant="contained"
-									style={{ marginTop: '1rem' }}
-								>
-									REGISTER
-								</button>
-								{errorMsg ? <p className="">{errorMsg}</p> : null}
+								{errorMsg ? <p className="error">{errorMsg}</p> : null}
 							</form>
 							<span>
 								Already a Member? <Link to="/login">Sign in</Link>
