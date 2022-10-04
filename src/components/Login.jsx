@@ -10,25 +10,25 @@ import axios from 'axios';
 
 function Login() {
 	const navigate = useNavigate();
-
+	// state of the user email and password
 	const [user, setUser] = useState({
 		email: '',
 		password: '',
 	});
-
+	// state of error message
 	const [errorMsg, setErrorMsg] = useState('');
-
+	// handles change on input field
 	const handleChange = (e) => {
 		const logUser = { ...user };
 		logUser[e.target.name] = e.target.value;
 		setUser(logUser);
 	};
-
+	// cookie for user if logged in
 	const loggedIn = (e) => {
 		document.cookie = 'loggedIn=true;max-age=60*10000';
 		navigate('/dashboard');
 	};
-
+	// login function that will post the backend api and determine if the user has valid login credentials.  If true, login user else set error message to be displayed.  All fields are cleared at end.
 	const handleLogin = (e) => {
 		e.preventDefault();
 		axios
@@ -37,10 +37,6 @@ function Login() {
 				password: user.password,
 			})
 			.then((response) => {
-				// localStorage.setItem('user_email', user.email);
-				// document.cookie = 'loggedIn=true;max-age=60*10000','';
-				// navigate('/dashboard');
-				// console.log('headers', response.headers);
 				document.cookie = `jwt=${response.headers.authorization};max-age=60*10000`;
 				document.cookie = `userId=${response.data.userId};max-age=60*10000`;
 				loggedIn();

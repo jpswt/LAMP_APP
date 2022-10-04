@@ -4,8 +4,8 @@ import NavBar from './NavBar';
 import OrgRequests from './org/OrgRequests';
 import axios from 'axios';
 import cookie from 'cookie';
-// console.log(cookie.parse(document.cookie));
 
+// function that handles which user requests to display
 const RenderRequests = () => {
 	const cookies = cookie.parse(document.cookie);
 	const [user, setUser] = useState({
@@ -31,7 +31,7 @@ const RenderRequests = () => {
 				console.log(error);
 			});
 	}, [cookies.jwt]);
-
+	// if user in not an organization, show the volunteer requests
 	if (user.isOrg === 0)
 		return (
 			<div>
@@ -39,6 +39,7 @@ const RenderRequests = () => {
 				<VolRequests user={user} />
 			</div>
 		);
+	// else shoe the organizations requests
 	else {
 		return (
 			<div>

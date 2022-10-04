@@ -9,10 +9,11 @@ import '../styles/NavBar.css';
 const NavBar = () => {
 	const navigate = useNavigate();
 	const [click, setClick] = useState(false);
+	// state of user click on NavBar
 	const handleClick = () => setClick(!click);
-
+	// State of the navBar in Mobile view
 	const closeMenu = () => setClick(false);
-
+	// state of navBar color onScroll
 	const [color, setColor] = useState(false);
 
 	const changeColor = () => {
@@ -22,7 +23,7 @@ const NavBar = () => {
 			setColor(false);
 		}
 	};
-
+	// function for user logout
 	const loggedOut = (e) => {
 		document.cookie = 'loggedIn=';
 		document.cookie = 'jwt=';
@@ -30,9 +31,9 @@ const NavBar = () => {
 		localStorage.clear();
 		closeMenu();
 	};
-
+	// changes color of NavBar on scroll
 	window.addEventListener('scroll', changeColor);
-
+	// checks if user is logged in and returns specific layout of NavBar
 	return checkAuth() ? (
 		<div className={color ? 'header header-bg' : 'header'}>
 			<nav className="navbar">
@@ -48,32 +49,19 @@ const NavBar = () => {
 				</div>
 				<ul className={click ? 'nav-menu active' : 'nav-menu'}>
 					<li className="nav-item">
-						{/* <a href="#hero" onClick={closeMenu}>
-							Home
-						</a> */}
 						<Link to="/dashboard" onClick={closeMenu}>
 							My SparkBoard
 						</Link>
 					</li>
 					<li className="nav-item">
-						{/* <a href="/dashboard" onClick={closeMenu}>
-							My Sparks
-						</a> */}
 						<Link to="/sparks" onClick={closeMenu}>
 							My Sparks
 						</Link>
 					</li>
 					<li className="nav-item">
-						{/* <a href="/" onClick={closeMenu}>
-							Login
-						</a> */}
 						<Link
 							to="/"
 							onClick={() => {
-								// document.cookie = 'loggedIn=';
-								// document.cookie = 'jwt=';
-								// navigate('/');
-								// localStorage.clear();
 								closeMenu();
 								loggedOut();
 							}}
@@ -85,6 +73,7 @@ const NavBar = () => {
 			</nav>
 		</div>
 	) : (
+		// if user not logged it, will return this version of NavBar
 		<div className={color ? 'header header-bg' : 'header'}>
 			<nav className="navbar">
 				<a href="/" className="logo">
@@ -109,9 +98,6 @@ const NavBar = () => {
 						</a>
 					</li>
 					<li className="nav-item">
-						{/* <a href="/" onClick={closeMenu}>
-							Login
-						</a> */}
 						<Link to="/login" onClick={closeMenu}>
 							Login
 						</Link>

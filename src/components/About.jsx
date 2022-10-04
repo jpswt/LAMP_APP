@@ -8,8 +8,10 @@ import volunteer1 from '../images/volunteer1.png';
 import enrollment from '../images/enrollment.png';
 import advice from '../images/advice-icon.png';
 
+//Content for the About Section of the Landing Page
 function About() {
 	return (
+		//Content for the How to Use Lamp site
 		<div className="about" id="about">
 			<h2>
 				We help volunteers and organizations connect to empower their community.{' '}
@@ -34,7 +36,6 @@ function About() {
 				</div>
 			</div>
 			<div className="container">
-				{/* <img src={john} alt="john" /> */}
 				<div className="col-2">
 					<img src={volunteer} alt="volunteer needed" />
 					<p>Volunteer your awesome skills to help others in your community.</p>

@@ -13,6 +13,7 @@ import axios from 'axios';
 function Register() {
 	const navigate = useNavigate();
 
+	// state for new user
 	const [newUser, setNewUser] = useState({
 		name: '',
 		username: '',
@@ -24,39 +25,31 @@ function Register() {
 		userCreated: false,
 	});
 	console.log(newUser);
-
+	// state for error message if unable to register user
 	const [errorMsg, setErrorMsg] = useState('');
-	const [clickMsg, setClickMsg] = useState('');
+	// state for register button to determine if all fields are selected
 	const [disabled, setDisabled] = useState(true);
+	// state to determine which type of user is selected (volunteer or org)
 	const [active, setActive] = useState('');
 
+	// handles the setting of which type of user is selected
 	const handleClick = (e) => {
 		setActive(e.target.id);
 	};
-
+	// handles if user has selected either vol or org (prevents registration unless one is selected)
 	const checkClick = (e) => {
 		let id = e.target.id;
 		if (id === '1' || id === '2') {
 			setDisabled(false);
 		}
 	};
-
-	const checkValid = (e) => {
-		if (disabled === true) {
-			setClickMsg(
-				'Be sure to select either if you are either a Volunteer or Organization'
-			);
-		} else {
-			return null;
-		}
-	};
-
+	// handles input change in the input fields
 	const handleChange = (e) => {
 		const newUserInput = { ...newUser };
 		newUserInput[e.target.name] = e.target.value;
 		setNewUser(newUserInput);
 	};
-
+	// handles the assignment of the isOrg flag on dB
 	const handleUserSelection = (e) => {
 		if (e.target.innerText === 'Volunteer') {
 			setNewUser((prev) => ({ ...prev, isOrg: 0 }));
@@ -64,7 +57,7 @@ function Register() {
 			setNewUser((prev) => ({ ...prev, isOrg: 1 }));
 		}
 	};
-
+	// if the user has registered as an organization, show the following form additions else do not show
 	const showOrgForm = () => {
 		if (newUser.isOrg === 1) {
 			return (
@@ -133,7 +126,7 @@ function Register() {
 			return null;
 		}
 	};
-
+	// handles registration of new user
 	const handleRegister = (e) => {
 		e.preventDefault();
 

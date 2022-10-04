@@ -4,12 +4,11 @@ import NavBar from './NavBar';
 import OrgBoard from './org/OrgBoard';
 import axios from 'axios';
 import cookie from 'cookie';
-// console.log(cookie.parse(document.cookie));
 
-// function Dashboard() {
+// handles which user dashboard to show based on user credentials
 const RenderBoards = () => {
 	const cookies = cookie.parse(document.cookie);
-	// const [loading, setLoading] = useState(true);
+
 	const [user, setUser] = useState({
 		id: '',
 		name: '',
@@ -37,7 +36,7 @@ const RenderBoards = () => {
 	useEffect(() => {
 		getUser();
 	}, []);
-
+	// if user's token shows they are not an organization, display this board
 	if (user.isOrg === 0)
 		return (
 			<div>
@@ -45,6 +44,7 @@ const RenderBoards = () => {
 				<VolBoard user={user} />
 			</div>
 		);
+	// else if they are an organization display this board
 	else {
 		if (user.isOrg === 1)
 			return (
