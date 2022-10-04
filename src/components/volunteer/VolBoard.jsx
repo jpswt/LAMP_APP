@@ -15,9 +15,12 @@ function VolBoard(props) {
 	const { user } = props;
 	// console.log('props', user);
 
+	// state for all of the organizations fro dB
 	const [allOrgs, setAllOrgs] = useState([]);
+	// state for a select organization
 	const [selectOrg, setSelectOrg] = useState('');
 
+	// state for the modal window and open/close functions
 	const [open, setOpen] = useState(false);
 	const handleOpen = () => setOpen(true);
 	const handleClose = () => setOpen(false);
@@ -42,6 +45,7 @@ function VolBoard(props) {
 			});
 	}, []);
 
+	// handles the selection of a particular organization
 	const handleClick = (e) => {
 		// console.log('click allOrgs is:', allOrgs);
 		for (let i = 0; i < allOrgs.length; i++) {

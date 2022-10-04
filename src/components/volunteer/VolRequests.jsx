@@ -10,10 +10,11 @@ function VolRequests(props) {
 	const { user } = props;
 	// console.log('props are:', user);
 
+	// state for accepted, declined and pending requests
 	const [accepted, setAccepted] = useState([]);
 	const [declined, setDeclined] = useState([]);
 	const [pending, setPending] = useState([]);
-
+	// state to determine if everything is loaded from fetch prior to render
 	const [isLoaded, setIsLoaded] = useState(false);
 
 	async function getVolRequests() {
@@ -27,6 +28,7 @@ function VolRequests(props) {
 				let accepted = [];
 				let declined = [];
 				let pending = [];
+				// pushing requests into appropriate array
 				response.data.map((requests) => {
 					switch (requests.accepted) {
 						case 1:
@@ -40,6 +42,7 @@ function VolRequests(props) {
 							break;
 					}
 				});
+				// setting the state of the requests after fetch and set isLoaded
 				setAccepted(accepted);
 				setDeclined(declined);
 				setPending(pending);
@@ -54,7 +57,7 @@ function VolRequests(props) {
 				console.log(error);
 			});
 	}
-
+	// load getRequests
 	useEffect(() => {
 		getVolRequests();
 	}, []);

@@ -3,19 +3,22 @@ import '../../styles/Map.css';
 
 function Map(props) {
 	// let map;
-	const [marker, setMarker] = useState([]);
 	// console.log('marker', marker);
 
 	const { allOrgs } = props;
 	// console.log(allOrgs);
+	//reference for the map
 	const ref = useRef();
+	// map styling
 	const style = {
 		width: '100%',
 		height: '400px',
 		marginBottom: '2rem',
 	};
 
+	// function to call the map inside of map wrapper
 	const getMap = useCallback(async () => {
+		//info for the map, center point, zoom and initial lat/lng
 		const map = new window.google.maps.Map(ref.current, {
 			center: { lat: 30.266, lng: -97.733 },
 			zoom: 11,
@@ -25,6 +28,8 @@ function Map(props) {
 		// console.log('Map loaded');
 		// const { allOrgs } = props;
 		// console.log('After props', allOrgs);
+
+		//use of geocoding that maps through each of the org addresses and places a marker on the map
 		const geocoder = new window.google.maps.Geocoder();
 		await allOrgs.map((org, index) => {
 			geocoder.geocode(
@@ -56,7 +61,7 @@ function Map(props) {
 			);
 		});
 	});
-
+	// call the map to render
 	useEffect(() => {
 		getMap().catch(console.error);
 	}, [getMap]);

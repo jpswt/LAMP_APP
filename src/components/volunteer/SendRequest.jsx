@@ -30,13 +30,19 @@ const style = {
 	p: 4,
 };
 
+// function that handles the user request to the organization
 function SendRequest(props) {
 	const cookies = cookie.parse(document.cookie);
 	const { handleClose, selectOrg, open } = props;
+	//state for input fields
 	const [value, onChange] = useState('');
+	// state for the date
 	const [date, onChangeDate] = useState(new Date());
+	// state for message field
 	const [message, setMessage] = useState('');
+	// state for the org selection
 	const [select, setSelect] = useState('');
+	// state for status message
 	const [statusMsg, setStatusMsg] = useState('');
 	// console.log('cookies are:', cookies);
 	// console.log('PopUp', selectOrg.id);
@@ -44,8 +50,11 @@ function SendRequest(props) {
 	// console.log('time value', value);
 	// console.log('Time Span is:', select);
 	// console.log('My Message is:', message);
+
+	// array for the time span drop down
 	const timeSpanArr = ['0-1 hours', '1-2 hours', '3-4 hours', '4+ hours'];
 
+	// function that converts time from 24hr to 12hr
 	const convertTime = () => {
 		let hours = value.slice(0, 2);
 		let minutes = value.slice(-2);
@@ -56,6 +65,7 @@ function SendRequest(props) {
 		return finalTime;
 	};
 
+	//function that converts date to a format the reads 'ex Jan 01, 1999'
 	const convertDate = () => {
 		let str = date.toString();
 		let parts = str.split(' ');
@@ -78,15 +88,15 @@ function SendRequest(props) {
 	};
 
 	// console.log('Final Date: ', convertDate(date));
-
+	// handle input field change for message
 	const handleInput = (e) => {
 		setMessage(e.target.value);
 	};
-
+	//handle input change for input fields
 	const handleChange = (e) => {
 		setSelect(e.target.value);
 	};
-
+	// handle the send request to dB
 	const handleRequest = (e) => {
 		e.preventDefault();
 
@@ -112,8 +122,9 @@ function SendRequest(props) {
 			})
 			.catch((error) => {
 				console.log(error);
+				setStatusMsg(' Your request has not been sent.  Please try again.');
 			});
-
+		// clear all input fields
 		onChange('');
 		onChangeDate(new Date());
 		setSelect('');

@@ -9,16 +9,20 @@ function PendingRequests(props) {
 	const { pending } = props;
 	// console.log('Pending props: ', props.pending);
 
+	// state for pagination
 	const [pageNumber, setPageNumber] = useState(0);
 
+	// sets request cards per page
 	const requestsPerPage = 6;
 	const pageVisited = pageNumber * requestsPerPage;
 	const pageCount = Math.ceil(pending.length / requestsPerPage);
 
+	// handles the page selector
 	const changePage = ({ selected }) => {
 		setPageNumber(selected);
 	};
 
+	// function that maps through the accepted requests to display on each page.
 	const displayRequests = pending
 		.slice(pageVisited, pageVisited + requestsPerPage)
 		.map((requests, index) => {
@@ -46,6 +50,8 @@ function PendingRequests(props) {
 				</div>
 			);
 		});
+
+	// if no pending requests, displays that no requests are available
 	if (pending.length === 0) {
 		return (
 			<div className="imgContainer">
@@ -53,8 +59,10 @@ function PendingRequests(props) {
 			</div>
 		);
 	}
-	if (pending.length < 5) {
+	// if requests are under 7, display the cards with no pagination controls
+	if (pending.length < 7) {
 		return <div className="requestGrid">{displayRequests}</div>;
+		// else display cards with pagination controls
 	} else {
 		return (
 			<div className="requestContent">

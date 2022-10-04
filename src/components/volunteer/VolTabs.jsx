@@ -7,6 +7,7 @@ import AcceptedRequests from './AcceptedRequests';
 import PendingRequests from './PendingRequests';
 import DeclinedRequests from './DeclinedRequests';
 
+// function for the tab panel for the requests
 function TabPanel(props) {
 	const { children, value, index, ...other } = props;
 
@@ -43,7 +44,7 @@ function a11yProps(index) {
 export default function VolTabs(props) {
 	const { user, accepted, declined, pending } = props;
 	const [value, setValue] = React.useState(0);
-
+	// handle the transition between the pending, accepted, declined tabs
 	const handleChange = (event, newValue) => {
 		setValue(newValue);
 	};
