@@ -88,6 +88,7 @@ function Register() {
 						id="phone"
 						type="tel"
 						label="Phone Number"
+						placeholder="555-555-5555"
 						name="phone"
 						pattern="[0-9]{10}"
 						variant="outlined"
