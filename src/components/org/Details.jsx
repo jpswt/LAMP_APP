@@ -18,7 +18,7 @@ const style = {
 	boxShadow: 24,
 	p: 4,
 };
-
+// function that displays the user request information in modal window
 function Details(props) {
 	const { handleClose, open, details } = props;
 	// console.log('details are:', details);

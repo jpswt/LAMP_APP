@@ -10,12 +10,13 @@ function OrgBoard(props) {
 	const { user } = props;
 	// console.log('props are:', user);
 
+	// state for accepted, declined and pending volunteer requests
 	const [accepted, setAccepted] = useState([]);
 	const [declined, setDeclined] = useState([]);
 	const [pending, setPending] = useState([]);
-
+	// state to determine if everything is loaded from fetch prior to render
 	const [isLoaded, setIsLoaded] = useState(false);
-
+	// function that gets requests and places them in appropriate arrays
 	async function getRequests() {
 		await axios
 			.get(`https://light-path.herokuapp.com/users/orgRequest`, {
@@ -27,6 +28,7 @@ function OrgBoard(props) {
 				let accepted = [];
 				let declined = [];
 				let pending = [];
+				//pushing requests into array
 				response.data.map((requests) => {
 					switch (requests.accepted) {
 						case 1:
@@ -40,6 +42,7 @@ function OrgBoard(props) {
 							break;
 					}
 				});
+				//setting the state of the requests after fetch and set isLoaded
 				setAccepted(accepted);
 				setDeclined(declined);
 				setPending(pending);
@@ -54,11 +57,11 @@ function OrgBoard(props) {
 				console.log(error);
 			});
 	}
-
+	// load getRequest
 	useEffect(() => {
 		getRequests();
 	}, [cookies.jwt]);
-
+	// handles whether a request is accepted
 	const handleAccept = (e) => {
 		axios
 			.put(
@@ -75,7 +78,7 @@ function OrgBoard(props) {
 				console.log('Accept Error', err);
 			});
 	};
-
+	// handle whether a request is declined
 	const handleDecline = (e) => {
 		axios
 			.put(
@@ -92,7 +95,7 @@ function OrgBoard(props) {
 				console.log('Decline Error', err);
 			});
 	};
-
+	// if everything is loaded then render board
 	if (!isLoaded) {
 		return <></>;
 	} else

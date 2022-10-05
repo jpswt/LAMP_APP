@@ -7,6 +7,7 @@ import { ImFire } from 'react-icons/im';
 
 import '../../styles/OrgsCard.css';
 
+// function for the organization card on the volunteer sparkboard page
 const OrgInfo = (props) => {
 	// console.log('org card', props);
 	const {
@@ -21,7 +22,7 @@ const OrgInfo = (props) => {
 		handleClick,
 		selectOrg,
 	} = props;
-
+	// converts user input for phone number into  xxx-xxx-xxxx format
 	const phoneConvert = () => {
 		let numericPhone = phone.replace(/\D/g, '');
 		let formatPhone = `${numericPhone.slice(0, 3)}-${numericPhone.slice(

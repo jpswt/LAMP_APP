@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from '@mui/material';
 import '../../styles/RequestCard.css';
 
+// function that displays the volunteer request card information
 function OrgRequestCard(props) {
 	const {
 		id,
@@ -22,6 +23,7 @@ function OrgRequestCard(props) {
 	// console.log('RequestCard props: ', props);
 	let orgTitle = name.toUpperCase();
 
+	// if request is pending, then request card will display buttons to accept or decline
 	if (isAccepted === null) {
 		return (
 			<div className="requestCard" name={id}>
@@ -75,6 +77,8 @@ function OrgRequestCard(props) {
 				</li>
 			</div>
 		);
+
+		// else the request card will display request card without buttons
 	} else {
 		return (
 			<div className="requestCard" name={id}>

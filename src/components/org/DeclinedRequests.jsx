@@ -17,17 +17,17 @@ function DeclinedRequests(props) {
 		selectRequest,
 	} = props;
 	// console.log('Declined props: ', props.declined);
-
+	// state for pagination
 	const [pageNumber, setPageNumber] = useState(0);
-
+	// sets request cards per page
 	const requestsPerPage = 6;
 	const pageVisited = pageNumber * requestsPerPage;
 	const pageCount = Math.ceil(declined.length / requestsPerPage);
-
+	// handles the page selector
 	const changePage = ({ selected }) => {
 		setPageNumber(selected);
 	};
-
+	// function that maps through the declined requests to display on each page.
 	const displayRequests = declined
 		.slice(pageVisited, pageVisited + requestsPerPage)
 		.map((requests, index) => {
@@ -67,6 +67,7 @@ function DeclinedRequests(props) {
 				</div>
 			);
 		});
+	// if no declined requests, displays that no requests are available
 	if (declined.length === 0) {
 		return (
 			<div className="imgContainer">
@@ -74,8 +75,10 @@ function DeclinedRequests(props) {
 			</div>
 		);
 	}
+	// if requests are under 7, display the cards with no pagination controls
 	if (declined.length < 7) {
 		return <div className="requestGrid">{displayRequests}</div>;
+		// else display cards with pagination controls
 	} else {
 		return (
 			<div>

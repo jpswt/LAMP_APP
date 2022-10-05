@@ -8,16 +8,17 @@ import '../../styles/Requests.css';
 function LatestRequests(props) {
 	const { pending, handleAccept, handleDecline } = props;
 	// console.log('all request props: ', props.pending);
-
+	// state for selected user request, used for details modal
 	const [selectRequest, setSelectRequest] = useState({});
+	// state and function for user details modal
 	const [open, setOpen] = useState(false);
 	const handleOpen = () => setOpen(true);
 	const handleClose = () => setOpen(false);
-
+	// handles the selection of the user request to determine which details to show
 	const handleClick = (selectedReq) => {
 		setSelectRequest(selectedReq);
 	};
-
+	// map over the pending requests and show only the first three most recent
 	const displayRequests = pending.slice(0, 3).map((requests, index) => {
 		let daySent = requests.created_on;
 		let date =
@@ -57,6 +58,7 @@ function LatestRequests(props) {
 			</div>
 		);
 	});
+	// if no latest requests are available, it will display no requests are available
 	if (pending.length === 0) {
 		return (
 			<div className="imgContainer1">
@@ -64,6 +66,7 @@ function LatestRequests(props) {
 			</div>
 		);
 	}
+	// else it will display the latest requests
 	return (
 		<div>
 			<div className="requestGrid">{displayRequests}</div>

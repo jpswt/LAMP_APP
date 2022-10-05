@@ -40,7 +40,7 @@ function a11yProps(index) {
 		'aria-controls': `simple-tabpanel-${index}`,
 	};
 }
-
+// function for the pending, accepted and declined tabs
 export default function OrgTabs(props) {
 	const {
 		user,
@@ -55,8 +55,9 @@ export default function OrgTabs(props) {
 		open,
 		selectRequest,
 	} = props;
+	// state of the the initial tab value
 	const [value, setValue] = React.useState(0);
-
+	// function that handles the tab value change
 	const handleChange = (event, newValue) => {
 		setValue(newValue);
 	};

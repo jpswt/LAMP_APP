@@ -9,18 +9,19 @@ function VolRequests(props) {
 	const cookies = cookie.parse(document.cookie);
 	const { user } = props;
 	// console.log('props are:', user);
-
+	// state for accepted, declined and pending requests
 	const [accepted, setAccepted] = useState([]);
 	const [declined, setDeclined] = useState([]);
 	const [pending, setPending] = useState([]);
-
+	// state to determine if everything is loaded from fetch prior to render
 	const [isLoaded, setIsLoaded] = useState(false);
-
+	// state of the request by user id
 	const [selectRequest, setSelectRequest] = useState({});
+	// modal window state and functions for open and close
 	const [open, setOpen] = useState(false);
 	const handleOpen = () => setOpen(true);
 	const handleClose = () => setOpen(false);
-
+	// handle the selected request by a given user
 	const handleClick = (selectedReq) => {
 		setSelectRequest(selectedReq);
 	};
@@ -36,6 +37,7 @@ function VolRequests(props) {
 				let accepted = [];
 				let declined = [];
 				let pending = [];
+				// pushing requests into appropriate array
 				response.data.map((requests) => {
 					switch (requests.accepted) {
 						case 1:
@@ -49,6 +51,7 @@ function VolRequests(props) {
 							break;
 					}
 				});
+				// setting the state of the requests after fetch and set isLoaded
 				setAccepted(accepted);
 				setDeclined(declined);
 				setPending(pending);
@@ -63,11 +66,11 @@ function VolRequests(props) {
 				console.log(error);
 			});
 	}
-
+	// load getRequests
 	useEffect(() => {
 		getRequests();
 	}, [cookies.jwt]);
-
+	// handle whether a request is accepted
 	const handleAccept = (e) => {
 		axios
 			.put(
@@ -84,7 +87,7 @@ function VolRequests(props) {
 				console.log('Accept Error', err);
 			});
 	};
-
+	// handle whether a request is declined
 	const handleDecline = (e) => {
 		axios
 			.put(
@@ -101,6 +104,7 @@ function VolRequests(props) {
 				console.log('Decline Error', err);
 			});
 	};
+	// if everything is loaded then render board
 	if (!isLoaded) {
 		return <></>;
 	} else
