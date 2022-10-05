@@ -190,6 +190,7 @@ function Register() {
 							justifyContent: 'center',
 							alignItems: 'center',
 							borderRadius: 4,
+							margin: '2rem 0 2rem 0',
 						}}
 					>
 						<img className="logo" src={logoBW} alt="lamp logo" />
