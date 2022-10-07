@@ -62,3 +62,13 @@
 .orgsCard a:hover {
 	text-decoration: underline;
 }
+
+@media screen and (max-width: 766px) {
+	.orgsCard li {
+		width: 21rem;
+	}
+
+	.orgsCard li .sendButton {
+		width: 10rem;
+	}
+}
