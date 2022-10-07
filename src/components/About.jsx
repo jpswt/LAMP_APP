@@ -31,7 +31,7 @@ function About() {
 				</div>
 				<div className="howToBox orphan center">
 					<img src={volunteer1} className="vol" alt="" />
-					<h3>3. Partner with an Organization today and see</h3>
+					<h3>3. Partner with an Organization</h3>
 					<p>Connect, meet and start volunteering!</p>
 				</div>
 			</div>
