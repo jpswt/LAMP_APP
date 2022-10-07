@@ -42,6 +42,10 @@
 	margin-top: 1rem;
 }
 
+.center {
+	text-align: center;
+}
+
 .about .howTo p {
 	width: 90%;
 	font-size: 1.3rem;
