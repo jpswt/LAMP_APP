@@ -57,7 +57,7 @@ Frontend:
 - CSS3
 - Material UI
 - Google Maps API
-- Geolcoding API
+- Geocoding API
 
 Backend:
 - Node.js
