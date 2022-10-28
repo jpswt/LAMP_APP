@@ -56,8 +56,7 @@ Frontend:
 - CSS3
 - Material UI
 - Google Maps API
-- Geolocation API
-- Google Places API
+- Geolcoding API
 
 Backend:
 - Node.js
