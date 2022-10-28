@@ -6,6 +6,8 @@ A full video tutorial of the lamp app can be viewed here: https://www.loom.com/s
 
 Lamp is an full stack Express/React application designed to help connect volunteers and their skills with non-profit organizations. Volunteers are able to search for organizations and send a request volunteering their time and services. Organizations receive these requests and are given the ability to accept/decline the request. Each volunteer and organization is authenticated through a JS web token, creating a personalized dashboard where they can perform their respective actions. Backend/database can be viewed here: https://github.com/jpswt/LAMP-Backend
 
+---
+
 <img width="1456" alt="landing" src="https://user-images.githubusercontent.com/94721942/198676476-792df103-8a77-4426-9eae-c2eff511ee9e.png">
 <img width="1465" alt="landing2" src="https://user-images.githubusercontent.com/94721942/198676856-4e7e54b8-c4c1-4fbc-95b1-3bd7b1486578.png">
 
