@@ -6,10 +6,11 @@ Lamp is an full stack Express/React application designed to help connect volunte
 
 ## Lamp Landing Page
 
+Above is the Lamp landing page.  It provides information to the user about how to use the app as well as redirecting them to sign up.
+
+
 <img width="1496" alt="landing" src="https://user-images.githubusercontent.com/94721942/198677589-a2e1fde8-e093-402c-a707-a252f5daf824.png">
 <img width="1465" alt="landing2" src="https://user-images.githubusercontent.com/94721942/198677602-1739d03b-e833-4398-b7fe-f408659dab24.png">
-
-Above is the Lamp landing page.  It provides information to the user about how to use the app as well as redirecting them to sign up.
 
 ## Login and Register
 
