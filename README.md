@@ -35,7 +35,7 @@ They can view the current status of the request to determine if it is pending, a
 
 ## Organization Dashboard
 
-Below is the organization dashboard.  An organizaiton can view all incoming user requests and determine if they would like to accept or decline them.
+Below is the organization dashboard.  An organization can view all incoming user requests and determine if they would like to accept or decline them.
 <img width="1446" alt="Screen Shot 2022-10-28 at 11 24 14 AM" src="https://user-images.githubusercontent.com/94721942/198687158-ab6106e7-c765-4578-9a84-901dd013a9b0.png">
 
 
