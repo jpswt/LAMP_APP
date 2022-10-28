@@ -1,8 +1,8 @@
 # Lamp - Light a Meaningful Path
 
-A full video tutorial of the lamp app can be viewed here: https://www.loom.com/share/b3a35c7be04c4e57aef2b47a7fa12f57
+A full video tutorial of the Lamp app can be viewed here: https://www.loom.com/share/b3a35c7be04c4e57aef2b47a7fa12f57
 
-Lamp is an full stack Express/React application designed to help connect volunteers and their skills with non-profit organizations. Volunteers are able to search for organizations and send a request volunteering their time and services. Organizations receive these requests and are given the ability to accept/decline the request. Each volunteer and organization is authenticated through a JS web token, creating a personalized dashboard where they can perform their respective actions. Backend/database can be viewed here: https://github.com/jpswt/LAMP-Backend
+Lamp is a full stack Express/React application designed to help connect volunteers and their skills with non-profit organizations. Volunteers are able to search for organizations and send a request volunteering their time and services. Organizations receive these requests and are given the ability to accept/decline the request. Each volunteer and organization is authenticated through a JS web token, creating a personalized dashboard where they can perform their respective actions. Backend/database can be viewed here: https://github.com/jpswt/LAMP-Backend
 
 ## Lamp Landing Page
 
