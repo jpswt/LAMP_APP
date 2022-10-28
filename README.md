@@ -50,5 +50,19 @@ Once the organization accepts/declines a request, they will automatically be mov
 
 <img width="1386" alt="Screen Shot 2022-10-28 at 11 24 58 AM" src="https://user-images.githubusercontent.com/94721942/198687519-dff46c7f-f9da-41c9-93d2-383db1c46e5c.png">
 
+## Technologies Used
+Frontend:
+- React JS
+- CSS3
+- Material UI
+- Google Maps API
+- Geolocation API
+- Google Places API
+
+Backend:
+Node.js
+Express.js
+- 
+
 
 
