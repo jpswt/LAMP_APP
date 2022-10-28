@@ -1,70 +1,17 @@
-# Getting Started with Create React App
+# Lamp - Light a Meaningful Path
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full video tutorial of the lamp app can be viewed here: https://www.loom.com/share/b3a35c7be04c4e57aef2b47a7fa12f57
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+Lamp is an full stack Express/React application designed to help connect volunteers and their skills with non-profit organizations. Volunteers are able to search for organizations and send a request volunteering their time and services. Organizations receive these requests and are given the ability to accept/decline the request. Each volunteer and organization is authenticated through a JS web token, creating a personalized dashboard where they can perform their respective actions. Backend/database can be viewed here: https://github.com/jpswt/LAMP-Backend
 
-### `npm start`
+![](../lampImg/landing.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Once a volunteer is signed up, they are able to search for organizations via google maps and an organization list. They can select the organization they would like to share their skills with and send them a request. The volunteer is able to track their requests by viewing them in request section of the dashboard. They can view the current status of the request to determine if it still pending, been accepted or declined.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Once an organization if signed up, they are able to view the incoming requests from volunteers and decide the appropriate actions for each request. Once the organization accepts/declines a request, they will automatically be moved to correct location. They can also monitor these requests through the dashboard.
 
-### `npm test`
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
