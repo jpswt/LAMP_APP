@@ -14,6 +14,8 @@ This page provides information to the user about how to use the app as well as r
 
 ## Login and Register
 
+Below are the login and registration page for both volunteers and organizations.  Based on their token credentials, once the user is logged in they are redirected to their respective dashboards, either for volunteer or an organization.
+
 <img width="1478" alt="login" src="https://user-images.githubusercontent.com/94721942/198678476-8356fbff-42d5-4ccf-be53-529660becc39.png">
 <img width="1473" alt="register" src="https://user-images.githubusercontent.com/94721942/198678487-63746c7c-aae4-4d7a-9d46-61653229ce4d.png">
 
