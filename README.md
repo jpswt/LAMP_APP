@@ -29,7 +29,7 @@ They can select the organization they would like to share their skills with and 
 
 <img width="1210" alt="volunteer-request" src="https://user-images.githubusercontent.com/94721942/198680655-7dcedcbf-be7c-4ce0-9690-5d372d73bad8.png">
 
-They can view the current status of the request to determine if it still pending, been accepted or declined.  
+They can view the current status of the request to determine if it is still pending, been accepted or declined.  
 
 <img width="1309" alt="volunteer-req-board" src="https://user-images.githubusercontent.com/94721942/198680694-e6069fe1-c6c8-4e47-9d3c-3f225e092b00.png">
 
