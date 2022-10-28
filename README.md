@@ -31,7 +31,7 @@ They can select the organization they would like to share their skills with and 
 
 They can view the current status of the request to determine if it is pending, accepted or declined.  
 
-<img width="1309" alt="volunteer-req-board" src="https://user-images.githubusercontent.com/94721942/198680694-e6069fe1-c6c8-4e47-9d3c-3f225e092b00.png">
+<img width="1309" alt="volunteer-request-board" src="https://user-images.githubusercontent.com/94721942/198680694-e6069fe1-c6c8-4e47-9d3c-3f225e092b00.png">
 
 ## Organization Dashboard
 
