@@ -33,7 +33,10 @@ They can view the current status of the request to determine if it is pending, a
 
 <img width="1309" alt="volunteer-req-board" src="https://user-images.githubusercontent.com/94721942/198680694-e6069fe1-c6c8-4e47-9d3c-3f225e092b00.png">
 
+## Organization Dashboard
 
+Below is the organization dashboard.  An organizaiton can view all incoming user requests and determine if they would like to accept or decline them.
+<img width="1446" alt="Screen Shot 2022-10-28 at 11 24 14 AM" src="https://user-images.githubusercontent.com/94721942/198687158-ab6106e7-c765-4578-9a84-901dd013a9b0.png">
 
 
 
