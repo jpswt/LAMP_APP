@@ -53,6 +53,7 @@ Once the organization accepts/declines a request, they will automatically be mov
 ## Technologies Used
 Frontend:
 - React JS
+- Node/NPM
 - CSS3
 - Material UI
 - Google Maps API
