@@ -60,9 +60,9 @@ Frontend:
 - Google Places API
 
 Backend:
-Node.js
-Express.js
-- 
+- Node.js
+- Express.js
+
 
 
 
