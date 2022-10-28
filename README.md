@@ -37,18 +37,18 @@ They can view the current status of the request to determine if it is pending, a
 
 Below is the organization dashboard.  An organization can view all incoming user requests and determine if they would like to accept or decline them.
 
-<img width="1446" alt="Screen Shot 2022-10-28 at 11 24 14 AM" src="https://user-images.githubusercontent.com/94721942/198687158-ab6106e7-c765-4578-9a84-901dd013a9b0.png">
+<img width="1446" alt="organization dashboard" src="https://user-images.githubusercontent.com/94721942/198687158-ab6106e7-c765-4578-9a84-901dd013a9b0.png">
 
 An organization can view more details about the user request.
 
-<img width="1376" alt="Screen Shot 2022-10-28 at 11 27 07 AM" src="https://user-images.githubusercontent.com/94721942/198687908-60c425eb-dad8-4d48-81d5-fc64eac4418e.png">
+<img width="1376" alt="user-details" src="https://user-images.githubusercontent.com/94721942/198687908-60c425eb-dad8-4d48-81d5-fc64eac4418e.png">
 
 
 Once the organization accepts/declines a request, they will automatically be moved to either the accepted or declined tabs as seen below.
 
-<img width="1461" alt="Screen Shot 2022-10-28 at 11 24 38 AM" src="https://user-images.githubusercontent.com/94721942/198687484-3110c8eb-326d-4cd5-98e7-15849dddbea1.png">
+<img width="1461" alt="accepted-requests" src="https://user-images.githubusercontent.com/94721942/198687484-3110c8eb-326d-4cd5-98e7-15849dddbea1.png">
 
-<img width="1386" alt="Screen Shot 2022-10-28 at 11 24 58 AM" src="https://user-images.githubusercontent.com/94721942/198687519-dff46c7f-f9da-41c9-93d2-383db1c46e5c.png">
+<img width="1386" alt="declined-requests" src="https://user-images.githubusercontent.com/94721942/198687519-dff46c7f-f9da-41c9-93d2-383db1c46e5c.png">
 
 ## Technologies Used
 Frontend:
