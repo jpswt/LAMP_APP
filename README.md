@@ -62,6 +62,8 @@ Frontend:
 Backend:
 - Node.js
 - Express.js
+- MYSQL
+- JWT Authentication
 
 
 
