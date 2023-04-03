@@ -27,7 +27,7 @@ function VolBoard(props) {
 
 	useEffect(() => {
 		axios
-			.get('https://light-path.herokuapp.com/users/orgsList', {
+			.get('https://lamp-api.onrender.com/users/orgsList', {
 				headers: {
 					Authorization: cookies.jwt,
 				},

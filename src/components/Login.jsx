@@ -32,7 +32,7 @@ function Login() {
 	const handleLogin = (e) => {
 		e.preventDefault();
 		axios
-			.post(`https://light-path.herokuapp.com/login`, {
+			.post(`https://lamp-api.onrender.com/login`, {
 				email: user.email,
 				password: user.password,
 			})

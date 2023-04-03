@@ -19,7 +19,7 @@ const RenderBoards = () => {
 
 	async function getUser() {
 		await axios
-			.get('https://light-path.herokuapp.com/users/user', {
+			.get('https://lamp-api.onrender.com/users/user', {
 				headers: {
 					Authorization: cookies.jwt,
 				},

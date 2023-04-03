@@ -19,7 +19,7 @@ function VolRequests(props) {
 
 	async function getVolRequests() {
 		await axios
-			.get(`https://light-path.herokuapp.com/users/volRequest`, {
+			.get(`https://lamp-api.onrender.com/users/volRequest`, {
 				headers: {
 					Authorization: cookies.jwt,
 				},

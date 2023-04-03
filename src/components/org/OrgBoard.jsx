@@ -19,7 +19,7 @@ function OrgBoard(props) {
 	// function that gets requests and places them in appropriate arrays
 	async function getRequests() {
 		await axios
-			.get(`https://light-path.herokuapp.com/users/orgRequest`, {
+			.get(`https://lamp-api.onrender.com/users/orgRequest`, {
 				headers: {
 					Authorization: cookies.jwt,
 				},

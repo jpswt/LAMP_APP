@@ -102,7 +102,7 @@ function SendRequest(props) {
 
 		axios
 			.post(
-				'https://light-path.herokuapp.com/users/sendRequest',
+				'https://lamp-api.onrender.com/users/sendRequest',
 				{
 					org_id: selectOrg.id,
 					start_date: convertDate(),

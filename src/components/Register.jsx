@@ -133,7 +133,7 @@ function Register() {
 
 		if (!newUser.isOrg) {
 			axios
-				.post('https://light-path.herokuapp.com/register/volunteer', {
+				.post('https://lamp-api.onrender.com/register/volunteer', {
 					name: newUser.name,
 					username: newUser.username,
 					email: newUser.email,
@@ -149,7 +149,7 @@ function Register() {
 				});
 		} else {
 			axios
-				.post('https://light-path.herokuapp.com/register/org', {
+				.post('https://lamp-api.onrender.com/register/org', {
 					name: newUser.name,
 					username: newUser.username,
 					email: newUser.email,
