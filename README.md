@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+# Lamp - Light a Meaningful Path
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full video tutorial of the Lamp app can be viewed here: https://www.loom.com/share/b3a35c7be04c4e57aef2b47a7fa12f57
 
-## Available Scripts
+Lamp is a full stack Express/React application designed to help connect volunteers and their skills with non-profit organizations. Volunteers are able to search for organizations and send a request volunteering their time and services. Organizations receive these requests and are given the ability to accept/decline the request. Each volunteer and organization is authenticated through a JS web token, creating a personalized dashboard where they can perform their respective actions. Backend/database can be viewed here: https://github.com/jpswt/LAMP-Backend
 
-In the project directory, you can run:
+## Lamp Landing Page
 
-### `npm start`
+This page provides information to the user about how to use the app as well as redirecting them to login/register.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<img width="1496" alt="landing" src="https://user-images.githubusercontent.com/94721942/198677589-a2e1fde8-e093-402c-a707-a252f5daf824.png">
+<img width="1465" alt="landing2" src="https://user-images.githubusercontent.com/94721942/198677602-1739d03b-e833-4398-b7fe-f408659dab24.png">
 
-### `npm test`
+## Login and Register
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Below are the login and registration pages for both volunteers and organizations.  Based on their JS web token credentials, the logged in user is redirected to their respective dashboards, either for volunteer or an organization.
 
-### `npm run build`
+<img width="1478" alt="login" src="https://user-images.githubusercontent.com/94721942/198678476-8356fbff-42d5-4ccf-be53-529660becc39.png">
+<img width="1473" alt="register" src="https://user-images.githubusercontent.com/94721942/198678487-63746c7c-aae4-4d7a-9d46-61653229ce4d.png">
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Volunteer Dashboard
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Below is the volunteer dashboard page.  A volunteer is able to search for organizations via google maps and an organization list.  
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<img width="1419" alt="volunteer-dashboard" src="https://user-images.githubusercontent.com/94721942/198680640-c82da424-53e8-47d4-932d-c2ae7f04c1e9.png">
 
-### `npm run eject`
+They can select the organization they would like to share their skills with and send them a request.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<img width="1210" alt="volunteer-request" src="https://user-images.githubusercontent.com/94721942/198680655-7dcedcbf-be7c-4ce0-9690-5d372d73bad8.png">
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+They can view the current status of the request to determine if it is pending, accepted or declined.  
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<img width="1309" alt="volunteer-request-board" src="https://user-images.githubusercontent.com/94721942/198680694-e6069fe1-c6c8-4e47-9d3c-3f225e092b00.png">
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Organization Dashboard
 
-## Learn More
+Below is the organization dashboard.  An organization can view all incoming user requests and determine if they would like to accept or decline them.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<img width="1446" alt="organization dashboard" src="https://user-images.githubusercontent.com/94721942/198687158-ab6106e7-c765-4578-9a84-901dd013a9b0.png">
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+An organization can view more details about the user request.
 
-### Code Splitting
+<img width="1376" alt="user-details" src="https://user-images.githubusercontent.com/94721942/198687908-60c425eb-dad8-4d48-81d5-fc64eac4418e.png">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+Once the organization accepts/declines a request, they will automatically be moved to either the accepted or declined tabs as seen below.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<img width="1461" alt="accepted-requests" src="https://user-images.githubusercontent.com/94721942/198687484-3110c8eb-326d-4cd5-98e7-15849dddbea1.png">
 
-### Making a Progressive Web App
+<img width="1386" alt="declined-requests" src="https://user-images.githubusercontent.com/94721942/198687519-dff46c7f-f9da-41c9-93d2-383db1c46e5c.png">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Technologies Used
+Frontend:
+- React JS
+- Node/NPM
+- CSS3
+- Material UI
+- Google Maps API
+- Geocoding API
 
-### Advanced Configuration
+Backend:
+- Node.js
+- Express.js
+- MYSQL
+- JWT Authentication
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

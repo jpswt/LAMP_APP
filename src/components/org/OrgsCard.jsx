@@ -63,24 +63,25 @@ const OrgInfo = (props) => {
 				</p>
 				<div className="btnContainer">
 					<Button
+						className="sendButton"
 						id={username}
 						onClick={(e) => {
 							handleClick(e);
 							handleOpen(e);
 						}}
-						sx={{
-							'padding': '0.6rem',
-							'width': '140px',
-							'backgroundColor': 'hsla(22, 86%, 57%, 0.85)',
-							'borderColor': 'hsla(22, 84%, 57%, 0.9)',
-							'borderRadius': '4px',
-							'color': 'white',
-							'cursor': 'pointer',
-							':hover': {
-								bgcolor: 'hsla(22, 86%, 60%, 0.9)',
-								color: 'white',
-							},
-						}}
+						// sx={{
+						// 	'padding': '0.6rem',
+						// 	'width': '8.75rem',
+						// 	'backgroundColor': 'hsla(22, 86%, 57%, 0.85)',
+						// 	'borderColor': 'hsla(22, 84%, 57%, 0.9)',
+						// 	'borderRadius': '4px',
+						// 	'color': 'white',
+						// 	'cursor': 'pointer',
+						// 	':hover': {
+						// 		bgcolor: 'hsla(22, 86%, 60%, 0.9)',
+						// 		color: 'white',
+						// 	},
+						// }}
 						endIcon={<ImFire />}
 					>
 						Send Spark
