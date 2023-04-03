@@ -34,7 +34,7 @@ const OrgInfo = (props) => {
 
 	return (
 		<div className="orgsCard">
-			<li>
+			<li className="listContainer">
 				<p>{name}</p>
 				<p>{address}</p>
 				<p>

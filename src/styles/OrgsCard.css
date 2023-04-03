@@ -2,7 +2,7 @@
 	color: var(--secondary-accent-dark);
 }
 
-.orgsCard li {
+.orgsCard .listContainer {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -32,8 +32,13 @@
 
 /* .orgsCard li .btnContainer {
 } */
+.btnContainer {
+	width: 100%;
+	margin: 1.75rem 0 0 0;
+}
 
-.orgsCard li .sendButton {
+.btnContainer .sendButton {
+	width: 8.75rem;
 	padding: 0.8rem;
 	background-color: hsla(22, 86%, 57%, 0.85);
 	border-color: hsla(22, 84%, 57%, 0.9);
