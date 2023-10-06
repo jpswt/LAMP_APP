@@ -65,7 +65,7 @@ function OrgBoard(props) {
 	const handleAccept = (e) => {
 		axios
 			.put(
-				`https://light-path.herokuapp.com/users/acceptReq`,
+				`https://lamp-app.onrender.com/users/acceptReq`,
 				{
 					id: e.target.id,
 				},
@@ -82,7 +82,7 @@ function OrgBoard(props) {
 	const handleDecline = (e) => {
 		axios
 			.put(
-				`https://light-path.herokuapp.com/users/declineReq`,
+				`https://lamp-app.onrender.com/users/declineReq`,
 				{
 					id: e.target.id,
 				},
