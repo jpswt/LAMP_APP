@@ -74,7 +74,7 @@ function VolRequests(props) {
 	const handleAccept = (e) => {
 		axios
 			.put(
-				`https://lamp-app.onrender.com/users/acceptReq`,
+				`https://lamp-api.onrender.com/users/acceptReq`,
 				{
 					id: e.target.id,
 				},
@@ -91,7 +91,7 @@ function VolRequests(props) {
 	const handleDecline = (e) => {
 		axios
 			.put(
-				`https://lamp-app.onrender.com/users/declineReq`,
+				`https://lamp-api.onrender.com/users/declineReq`,
 				{
 					id: e.target.id,
 				},
